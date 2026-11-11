@@ -91,7 +91,7 @@ class TrainedModels:
 
 # Hiperparámetros por defecto (los elegidos por ``select_hyperparams`` en la corrida
 # documentada en reports/metricas_parte1.json).
-DEFAULT_HP = {"class_weight": "sqrt", "l2": 1e-3}
+DEFAULT_HP = {"class_weight": "sqrt", "l2": 1e-2}
 NO_HMM = [f for f in FEATURES if not f.startswith("p_")]
 
 
@@ -114,15 +114,19 @@ def train_models(lw: pd.DataFrame, train_end: str, hp: dict | None = None,
     return m, feats
 
 
-def select_hyperparams(lw: pd.DataFrame, train_end: str, n_folds: int = 5) -> tuple[dict, list]:
+def select_hyperparams(lw: pd.DataFrame, train_end: str, n_folds: int = 5,
+                      tie_tol: float = 0.005) -> tuple[dict, list]:
     """Elige pesos de clase y L2 con validación temporal *dentro* del periodo de
     entrenamiento (los últimos ``n_folds`` meses), maximizando el F1-macro medio.
+    Desempate (fijado antes de ver la prueba): entre las configuraciones a menos de
+    ``tie_tol`` del mejor F1-macro, se elige la de menor log-loss de validación.
     El periodo de prueba nunca se usa para elegir hiperparámetros."""
     grid = [{"class_weight": cw, "l2": l2} for cw in (None, "sqrt", "balanced")
             for l2 in (1e-3, 1e-2, 1e-1)]
     end = pd.Timestamp(train_end)
     months = [(end - pd.offsets.MonthBegin(i + 1)) for i in range(n_folds)][::-1]
     scores = {i: [] for i in range(len(grid))}
+    losses = {i: [] for i in range(len(grid))}
     for s in months:
         e = s + pd.offsets.MonthEnd(0)
         tre = s - pd.Timedelta(days=1)
@@ -133,11 +137,17 @@ def select_hyperparams(lw: pd.DataFrame, train_end: str, n_folds: int = 5) -> tu
         sc = StandardScaler().fit(Xtr)
         for i, hp in enumerate(grid):
             mdl = SoftmaxRegression(epochs=1000, **hp).fit(sc.transform(Xtr), ytr, n_classes=K)
-            r = classification_metrics(yva, mdl.predict(sc.transform(Xva)), K, C.CLASSES)
+            P = mdl.predict_proba(sc.transform(Xva))
+            r = classification_metrics(yva, P.argmax(1), K, C.CLASSES)
             scores[i].append(r["macro_f1"])
-    table = [{**grid[i], "macro_f1_cv": float(np.mean(v))} for i, v in scores.items()]
+            losses[i].append(prob_metrics(yva, P)["log_loss"])
+    table = [{**grid[i], "macro_f1_cv": float(np.mean(scores[i])),
+              "log_loss_cv": float(np.mean(losses[i]))} for i in scores]
     table.sort(key=lambda r: -r["macro_f1_cv"])
-    best = {k: table[0][k] for k in ("class_weight", "l2")}
+    top = table[0]["macro_f1_cv"]
+    tied = [r for r in table if r["macro_f1_cv"] >= top - tie_tol]
+    chosen = min(tied, key=lambda r: r["log_loss_cv"])
+    best = {k: chosen[k] for k in ("class_weight", "l2")}
     return best, table
 
 
