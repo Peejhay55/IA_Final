@@ -22,7 +22,7 @@
     {"id": "P10", "pregunta": "¿Cómo estuvo la calidad del aire en Bello el 2021-05-01?",
      "herramientas": ["get_pm25"], "citas": [], "contiene": ["2020-02-20|histórico|historico"]},
     {"id": "P11", "pregunta": "¿Qué pronosticaba el modelo para el 17 de agosto de 2019 en Belén?",
-     "herramientas": ["predict_tomorrow"], "citas": ["MODELO"], "contiene": ["Aceptable"]},
+     "herramientas": ["predict_tomorrow"], "citas": ["MODELO"], "contiene": ["Aceptable", "2019-08-17|17 de agosto"]},
     {"id": "P12", "pregunta": "¿Qué significa el estado 'Elevado' del modelo HMM?",
      "herramientas": ["search_docs"], "citas": ["METODOLOGIA"], "contiene": ["30|régimen|regimen"]},
     {"id": "P13", "pregunta": "¿Qué umbral de PM2.5 define el nivel de emergencia?",

@@ -4,9 +4,9 @@
     "n": 15,
     "herramienta_correcta": 0.9333333333333333,
     "cito_fuente": 0.8666666666666667,
-    "contenido_correcto": 0.8666666666666667,
+    "contenido_correcto": 0.8,
     "llamadas_herramientas_promedio": 1.7333333333333334,
-    "segundos_promedio": 0.07066666666666667,
+    "segundos_promedio": 0.074,
     "respaldos_sin_llm": null
   },
   "detalle": [
@@ -30,7 +30,7 @@
       ],
       "cito_fuente": true,
       "contenido_correcto": true,
-      "segundos": 0.79,
+      "segundos": 0.85,
       "backend_real": "offline",
       "aviso": null,
       "respuesta": "En SAB-RAME (Sabaneta) el PM2.5 promedio del 2019-03-16 fue 52.3 µg/m³, categoría ICA «Dañina a la salud de grupos sensibles» [SIATA-DATOS]. Según «Naranja – Dañina para grupos sensibles (38 a 55 µg/m³)»: Adultos mayores, niños y personas con afecciones pulmonares o cardiovasculares pueden verse afectados si hacen actividades al aire libre por tiempo prolongado. Se recomienda a los grupos sensibles reducir o evitar el ejercicio vigoroso al aire libre, en especial en las horas de mayor tráfico (aproximadamente 6:00–10:00 y 16:00–20:00), y preferir el transporte público para no aumentar las emisiones. [SALUD] Esta información es orientativa y no es consejo médico."
@@ -54,7 +54,7 @@
       ],
       "cito_fuente": true,
       "contenido_correcto": true,
-      "segundos": 0.0,
+      "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,
       "respuesta": "Según «Nivel máximo permisible de PM2.5 en 24 horas»: Desde el 1 de julio de 2018 el nivel máximo permisible de material particulado fino PM2.5 para un tiempo de exposición de 24 horas es 37 µg/m³, y el de PM10 es 75 µg/m³ (artículo 2, parágrafo 1). Antes, con la Resolución 610 de 2010, el límite diario de PM2.5 era 50 µg/m³. [RES2254-NORMA]"
@@ -81,7 +81,7 @@
       ],
       "cito_fuente": true,
       "contenido_correcto": true,
-      "segundos": 0.17,
+      "segundos": 0.16,
       "backend_real": "offline",
       "aviso": null,
       "respuesta": "En ITA-CJUS (Itagüí) el PM2.5 promedio del 2019-03-15 fue 47.7 µg/m³, categoría ICA «Dañina a la salud de grupos sensibles» [SIATA-DATOS]. Para el 2019-03-16 el modelo pronostica «Dañina» (Buena 0%, Aceptable 27%, Dañina 73%); el estado latente actual es «Elevado» [MODELO]. Según «Naranja – Dañina para grupos sensibles (38 a 55 µg/m³)»: Adultos mayores, niños y personas con afecciones pulmonares o cardiovasculares pueden verse afectados si hacen actividades al aire libre por tiempo prolongado. Se recomienda a los grupos sensibles reducir o evitar el ejercicio vigoroso al aire libre, en especial en las horas de mayor tráfico (aproximadamente 6:00–10:00 y 16:00–20:00), y preferir el transporte público para no aumentar las emisiones. [SALUD] Esta información es orientativa y no es consejo médico."
@@ -255,7 +255,7 @@
       "citas": [],
       "cito_fuente": true,
       "contenido_correcto": true,
-      "segundos": 0.01,
+      "segundos": 0.0,
       "backend_real": "offline",
       "aviso": null,
       "respuesta": "No pude consultar la medición: La fecha 2021-05-01 está fuera del histórico disponible (2019-02-21 a 2020-02-20). Los datos son históricos de SIATA."
@@ -279,7 +279,7 @@
         "SALUD"
       ],
       "cito_fuente": true,
-      "contenido_correcto": true,
+      "contenido_correcto": false,
       "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,

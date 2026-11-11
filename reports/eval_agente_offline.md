@@ -3,7 +3,7 @@
 - Preguntas: 15
 - Herramienta correcta: **93%**
 - Citó la fuente esperada: **87%**
-- Contenido clave correcto: **87%**
+- Contenido clave correcto: **80%**
 - Llamadas a herramientas por pregunta: 1.7
 - Tiempo medio por pregunta: 0.07 s
 
@@ -19,7 +19,7 @@
 | P08 | ¿Por qué empeora la calidad del aire en marzo en el Valle de Aburrá? | search_docs | estado_regional, search_docs | ✅ | SIATA-DATOS, RES2254-NIVELES, MODELO, SIATA-VALLE | ✅ | ✅ |
 | P09 | ¿Qué estaciones de PM2.5 hay en Caldas? | listar_estaciones | get_pm25, search_docs | ❌ | SIATA-DATOS, SALUD | ✅ | ✅ |
 | P10 | ¿Cómo estuvo la calidad del aire en Bello el 2021-05-01? | get_pm25 | get_pm25 | ✅ |  | ✅ | ✅ |
-| P11 | ¿Qué pronosticaba el modelo para el 17 de agosto de 2019 en Belén? | predict_tomorrow | predict_tomorrow, search_docs | ✅ | MODELO, SALUD | ✅ | ✅ |
+| P11 | ¿Qué pronosticaba el modelo para el 17 de agosto de 2019 en Belén? | predict_tomorrow | predict_tomorrow, search_docs | ✅ | MODELO, SALUD | ✅ | ❌ |
 | P12 | ¿Qué significa el estado 'Elevado' del modelo HMM? | search_docs | search_docs | ✅ | METODOLOGIA | ✅ | ✅ |
 | P13 | ¿Qué umbral de PM2.5 define el nivel de emergencia? | search_docs | estado_regional, search_docs | ✅ | SIATA-DATOS, RES2254-NIVELES, MODELO | ✅ | ✅ |
 | P14 | ¿Cómo estaba el aire en Tráfico Sur y qué tan representativa es esa estación? | get_pm25, search_docs | get_pm25, search_docs | ✅ | SIATA-DATOS, SALUD | ✅ | ✅ |

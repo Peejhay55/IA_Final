@@ -134,7 +134,7 @@ Se mide si llamó a la **herramienta correcta**, si **citó la fuente** esperada
 
 | Backend | Herramienta correcta | Citó la fuente | Contenido correcto |
 |---|---|---|---|
-| Router de respaldo sin LLM (línea base) | 93 % | 87 % | 87 % |
+| Router de respaldo sin LLM (línea base) | 93 % | 87 % | 80 % |
 | LLM (`openai/gpt-oss-120b`) | *ejecutar `run_eval_agente.py --backend llm`* | | |
 
 ## 5. Dashboard (`app.py`)
