@@ -1,0 +1,22 @@
+codigo,nombre_corto,nombre,municipio,lat,lon,tipo,dias_validos
+3,GIR-SOSN,Girardota - S.O.S Aburrá Norte,Girardota,6.3784332,-75.4511414,Poblacional,357
+12,CEN-TRAF,Estación Tráfico Centro,Medellín,6.2525611,-75.5695801,Tráfico,359
+25,MED-UNNV,"Medellín, centro occidente - Universidad Nacional, sede El Volador",Medellín,6.2633696,-75.5770035,Poblacional,358
+28,ITA-CJUS,Itagüí - Casa de Justicia Itagüí,Itagüí,6.1856666,-75.5972061,Poblacional,364
+31,CAL-LASA,Caldas - Corporacion Universitaria Lasallista,Caldas,6.0990806,-75.6386261,Poblacional,358
+38,ITA-CONC,Itagüí - I.E. Concejo Municipal de Itagüí,Itagüí,6.1684971,-75.6443558,Poblacional,357
+44,MED-LAYE,"Medellín, El Poblado - Tanques La Ye EPM",Medellín,6.1825418,-75.5506363,Poblacional,359
+48,SUR-TRAF,Estación Tráfico Sur,Sabaneta,6.1523128,-75.6274872,Tráfico,351
+69,CAL-JOAR,Caldas - E U Joaquín Aristizabal,Caldas,6.0930777,-75.637764,Poblacional,358
+78,EST-HOSP,La Estrella - Hospital,La Estrella,6.1555305,-75.6441727,Poblacional,360
+79,MED-ALTA,"Medellín, Altavista - I.E. Pedro Octavio Amado",Medellín,6.2218938,-75.6106033,Poblacional,360
+80,MED-VILL,"Medellín, Villahermosa - Planta de producción de agua potable EPM",Medellín,6.2589092,-75.5482635,Poblacional,356
+81,BAR-TORR,Barbosa - Torre Social,Barbosa,6.4369602,-75.3303986,Poblacional,359
+82,COP-CVID,Copacabana - Ciudadela Educativa La Vida,Copacabana,6.3453598,-75.5047531,Poblacional,358
+83,MED-BEME,"Medellin, Belén - I.E Pedro Justo Berrio",Medellín,6.2372341,-75.610466,Poblacional,360
+84,MED-TESO,"Medellín, El Poblado - I.E INEM sede Santa Catalina",Medellín,6.1998701,-75.5609512,Poblacional,355
+85,MED-SCRI,"Medellín, San Cristobal - Parque Biblioteca Fernando Botero",Medellín,6.2778502,-75.6364288,Poblacional,354
+86,MED-ARAN,"Medellín, Aranjuez - I.E Ciro Mendia",Medellín,6.2904806,-75.5555191,Poblacional,361
+87,BEL-FEVE,Bello - I.E. Fernando Vélez,Bello,6.3375502,-75.5678024,Poblacional,364
+88,ENV-HOSP,Envigado - E.S.E. Santa Gertrudis,Envigado,6.1686831,-75.5819702,Poblacional,359
+90,SAB-RAME,Sabaneta - I.E. Rafael J. Mejía,Sabaneta,6.1433334,-75.6202774,Poblacional,358
