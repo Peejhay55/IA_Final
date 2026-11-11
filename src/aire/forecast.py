@@ -59,7 +59,7 @@ def build_features(lw: pd.DataFrame, hmm: GaussianHMM) -> pd.DataFrame:
         df["log_media_regional"] = regional
         df[["p_normal", "p_alerta", "p_critico"]] = filt
         manana = lw.index + pd.Timedelta(days=1)
-        df["manana_fin_de_semana"] = (manana.dayofweek >= 5).astype(float)
+        df["manana_fin_de_semana"] = (manana.day_of_week >= 5).astype(float)
         df["mes_sin"] = np.sin(2 * np.pi * manana.month / 12)
         df["mes_cos"] = np.cos(2 * np.pi * manana.month / 12)
         df[["hmm_p_buena", "hmm_p_aceptable", "hmm_p_danina"]] = p_hmm_cls
