@@ -21,7 +21,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from . import config as C
-from .tools import TOOL_SCHEMAS, call_tool, data_range, get_retriever
+from .tools import TOOL_SCHEMAS, call_tool, data_range, effective_args, get_retriever
 
 DATA_CODES = {
     "SIATA-DATOS": {"titulo": "Histórico de PM2.5 de SIATA – AMVA (EntregaData1)",
@@ -171,12 +171,13 @@ class LLMAgent:
                                    for tc in tcs]})
                 for tc in tcs:
                     try:
-                        args = json.loads(tc.function.arguments or "{}")
+                        args = effective_args(tc.function.name, tc.function.arguments,
+                                              ctx["fecha"])
                     except json.JSONDecodeError:
-                        args = tc.function.arguments
-                    result = call_tool(tc.function.name, args, default_fecha=ctx["fecha"])
-                    steps.append(Step(tc.function.name, args if isinstance(args, dict) else
-                                      {"raw": args}, result))
+                        args = {"raw": tc.function.arguments}
+                    result = (call_tool(tc.function.name, args) if "raw" not in args else
+                              {"error": "Los argumentos de la herramienta no son JSON válido."})
+                    steps.append(Step(tc.function.name, args, result))
                     messages.append({"role": "tool", "tool_call_id": tc.id,
                                      "content": _truncate(result)})
             if answer is None:  # Tmáx alcanzado: forzar respuesta sin herramientas

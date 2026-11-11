@@ -261,17 +261,25 @@ TOOL_SCHEMAS = [
 ]
 
 
+DATE_TOOLS = ("get_pm25", "predict_tomorrow", "estado_regional")
+
+
+def effective_args(name: str, args: dict | str | None, default_fecha: str | None = None) -> dict:
+    """Normaliza los argumentos e inyecta la fecha del tablero si el LLM no la dio."""
+    if isinstance(args, str):
+        args = json.loads(args) if args.strip() else {}
+    args = dict(args or {})
+    if default_fecha and name in DATE_TOOLS and not args.get("fecha"):
+        args["fecha"] = default_fecha
+    return args
+
+
 def call_tool(name: str, args: dict | str | None, default_fecha: str | None = None) -> dict:
     """Ejecuta una herramienta y devuelve SIEMPRE un dict (errores incluidos)."""
     if name not in TOOLS:
         return {"error": f"Herramienta desconocida '{name}'. Disponibles: {list(TOOLS)}"}
     try:
-        if isinstance(args, str):
-            args = json.loads(args) if args.strip() else {}
-        args = dict(args or {})
-        if default_fecha and name in ("get_pm25", "predict_tomorrow", "estado_regional") \
-                and not args.get("fecha"):
-            args["fecha"] = default_fecha
+        args = effective_args(name, args, default_fecha)
         return _jsonable(TOOLS[name](**args))
     except TypeError as exc:
         return {"error": f"Argumentos inválidos para {name}: {exc}"}

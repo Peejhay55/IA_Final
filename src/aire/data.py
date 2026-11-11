@@ -39,14 +39,16 @@ def ica_color(pm25: float) -> str:
 
 def to_class(pm25) -> np.ndarray | str:
     """Clase del problema (Buena / Aceptable / Dañina). Acepta escalar o arreglo."""
-    arr = np.asarray(pm25, dtype=float)
-    idx = np.digitize(arr, C.CLASS_EDGES, right=True)  # <=12 ->0, <=37 ->1, >37 ->2
-    out = np.array(C.CLASSES, dtype=object)[idx]
-    return out.item() if out.ndim == 0 else out
+    idx = to_class_index(pm25)
+    labels = np.array(C.CLASSES, dtype=object)
+    return labels[int(idx)] if np.ndim(idx) == 0 else labels[idx]
 
 
 def to_class_index(pm25) -> np.ndarray:
-    return np.digitize(np.asarray(pm25, dtype=float), C.CLASS_EDGES, right=True)
+    """Índice de clase con la misma regla de redondeo (1 decimal) que el ICA:
+    <=12 → 0 (Buena), <=37 → 1 (Aceptable), >37 → 2 (Dañina)."""
+    arr = np.round(np.asarray(pm25, dtype=float), 1)
+    return np.digitize(arr, C.CLASS_EDGES, right=True)
 
 
 # ---------------------------------------------------------------------------
