@@ -57,7 +57,10 @@ CLASS_EDGES = [12.0, 37.0]  # <=12 Buena, (12, 37] Aceptable, >37 Dañina
 CLASS_COLORS = {"Buena": "#2e9e44", "Aceptable": "#e3c400", "Dañina": "#e8590c"}
 
 # Estados latentes del HMM (ordenados por media creciente)
-HMM_STATES = ["Normal", "Alerta", "Episodio crítico"]
+# Nombres fieles a lo aprendido (medias ≈ 11, 18 y 30 µg/m³). Corresponden a los
+# estados "normal / alerta / episodio" sugeridos en el enunciado, pero el estado más
+# alto NO equivale a un episodio crítico oficial (su media está en categoría Aceptable).
+HMM_STATES = ["Bajo", "Moderado", "Elevado"]
 HMM_N_STATES = 3
 
 # Partición temporal principal

@@ -23,7 +23,7 @@
      "herramientas": ["get_pm25"], "citas": [], "contiene": ["2020-02-20|histórico|historico"]},
     {"id": "P11", "pregunta": "¿Qué pronosticaba el modelo para el 17 de agosto de 2019 en Belén?",
      "herramientas": ["predict_tomorrow"], "citas": ["MODELO"], "contiene": ["Aceptable"]},
-    {"id": "P12", "pregunta": "¿Qué significa el estado 'Episodio crítico' del modelo HMM?",
+    {"id": "P12", "pregunta": "¿Qué significa el estado 'Elevado' del modelo HMM?",
      "herramientas": ["search_docs"], "citas": ["METODOLOGIA"], "contiene": ["30|régimen|regimen"]},
     {"id": "P13", "pregunta": "¿Qué umbral de PM2.5 define el nivel de emergencia?",
      "herramientas": ["search_docs"], "citas": ["RES2254-NIVELES", "POECA"], "contiene": ["151"]},

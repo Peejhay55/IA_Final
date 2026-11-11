@@ -1,7 +1,7 @@
 """Modelo Oculto de Markov (HMM) gaussiano implementado desde cero con NumPy.
 
 Modela la serie diaria de log(PM2.5) de cada estación como generada por una cadena
-de Markov de K estados latentes (Normal, Alerta, Episodio crítico). Cada estado emite
+de Markov de K estados latentes (Bajo, Moderado, Elevado). Cada estado emite
 log(PM2.5) ~ N(mu_k, sigma_k^2).
 
 Incluye:

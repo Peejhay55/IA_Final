@@ -6,9 +6,9 @@
   },
   "hmm": {
     "estados": [
-      "Normal",
-      "Alerta",
-      "Episodio crítico"
+      "Bajo",
+      "Moderado",
+      "Elevado"
     ],
     "media_pm25_por_estado": [
       11.5,

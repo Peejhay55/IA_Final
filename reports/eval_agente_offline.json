@@ -5,8 +5,8 @@
     "herramienta_correcta": 0.9333333333333333,
     "cito_fuente": 0.8666666666666667,
     "contenido_correcto": 0.8666666666666667,
-    "llamadas_herramientas_promedio": 1.8,
-    "segundos_promedio": 0.06866666666666667,
+    "llamadas_herramientas_promedio": 1.7333333333333334,
+    "segundos_promedio": 0.07066666666666667,
     "respaldos_sin_llm": null
   },
   "detalle": [
@@ -30,7 +30,7 @@
       ],
       "cito_fuente": true,
       "contenido_correcto": true,
-      "segundos": 0.77,
+      "segundos": 0.79,
       "backend_real": "offline",
       "aviso": null,
       "respuesta": "En SAB-RAME (Sabaneta) el PM2.5 promedio del 2019-03-16 fue 52.3 µg/m³, categoría ICA «Dañina a la salud de grupos sensibles» [SIATA-DATOS]. Según «Naranja – Dañina para grupos sensibles (38 a 55 µg/m³)»: Adultos mayores, niños y personas con afecciones pulmonares o cardiovasculares pueden verse afectados si hacen actividades al aire libre por tiempo prolongado. Se recomienda a los grupos sensibles reducir o evitar el ejercicio vigoroso al aire libre, en especial en las horas de mayor tráfico (aproximadamente 6:00–10:00 y 16:00–20:00), y preferir el transporte público para no aumentar las emisiones. [SALUD] Esta información es orientativa y no es consejo médico."
@@ -81,10 +81,10 @@
       ],
       "cito_fuente": true,
       "contenido_correcto": true,
-      "segundos": 0.16,
+      "segundos": 0.17,
       "backend_real": "offline",
       "aviso": null,
-      "respuesta": "En ITA-CJUS (Itagüí) el PM2.5 promedio del 2019-03-15 fue 47.7 µg/m³, categoría ICA «Dañina a la salud de grupos sensibles» [SIATA-DATOS]. Para el 2019-03-16 el modelo pronostica «Dañina» (Buena 0%, Aceptable 27%, Dañina 73%); el estado latente actual es «Episodio crítico» [MODELO]. Según «Naranja – Dañina para grupos sensibles (38 a 55 µg/m³)»: Adultos mayores, niños y personas con afecciones pulmonares o cardiovasculares pueden verse afectados si hacen actividades al aire libre por tiempo prolongado. Se recomienda a los grupos sensibles reducir o evitar el ejercicio vigoroso al aire libre, en especial en las horas de mayor tráfico (aproximadamente 6:00–10:00 y 16:00–20:00), y preferir el transporte público para no aumentar las emisiones. [SALUD] Esta información es orientativa y no es consejo médico."
+      "respuesta": "En ITA-CJUS (Itagüí) el PM2.5 promedio del 2019-03-15 fue 47.7 µg/m³, categoría ICA «Dañina a la salud de grupos sensibles» [SIATA-DATOS]. Para el 2019-03-16 el modelo pronostica «Dañina» (Buena 0%, Aceptable 27%, Dañina 73%); el estado latente actual es «Elevado» [MODELO]. Según «Naranja – Dañina para grupos sensibles (38 a 55 µg/m³)»: Adultos mayores, niños y personas con afecciones pulmonares o cardiovasculares pueden verse afectados si hacen actividades al aire libre por tiempo prolongado. Se recomienda a los grupos sensibles reducir o evitar el ejercicio vigoroso al aire libre, en especial en las horas de mayor tráfico (aproximadamente 6:00–10:00 y 16:00–20:00), y preferir el transporte público para no aumentar las emisiones. [SALUD] Esta información es orientativa y no es consejo médico."
     },
     {
       "id": "P04",
@@ -110,7 +110,7 @@
       "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,
-      "respuesta": "El 2019-03-17 el promedio de las estaciones poblacionales fue 54.6 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Episodio crítico': 19} [MODELO]."
+      "respuesta": "El 2019-03-17 el promedio de las estaciones poblacionales fue 54.6 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Elevado': 19} [MODELO]."
     },
     {
       "id": "P05",
@@ -164,7 +164,7 @@
       "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,
-      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Episodio crítico': 19} [MODELO]. Según «Medidas de movilidad por nivel»: En prevención se amplía la restricción vehicular (pico y placa) por dígitos de placa en horas pico; en alerta la restricción se extiende a seis dígitos y a horarios más amplios para vehículos particulares y motos; en emergencia la restricción puede cubrir todos los dígitos durante casi todo el día para particulares, motos y carga. Suelen exceptuarse vehículos de emergencia, de transporte público colectivo, eléctricos y a gas natural. [POECA]"
+      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Elevado': 19} [MODELO]. Según «Medidas de movilidad por nivel»: En prevención se amplía la restricción vehicular (pico y placa) por dígitos de placa en horas pico; en alerta la restricción se extiende a seis dígitos y a horarios más amplios para vehículos particulares y motos; en emergencia la restricción puede cubrir todos los dígitos durante casi todo el día para particulares, motos y carga. Suelen exceptuarse vehículos de emergencia, de transporte público colectivo, eléctricos y a gas natural. [POECA]"
     },
     {
       "id": "P07",
@@ -214,7 +214,7 @@
       "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,
-      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Episodio crítico': 19} [MODELO]. Según «Por qué hay episodios críticos en febrero–marzo y octubre–noviembre»: En las épocas secas la radiación solar calienta la superficie y genera turbulencia que mezcla el aire y saca los contaminantes del valle. En las temporadas de transición hacia las lluvias (febrero–abril y octubre–noviembre) se forma con frecuencia una capa de nubes bajas que reduce la radiación, estabiliza la atmósfera y disminuye la altura de mezcla. [SIATA-VALLE]"
+      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Elevado': 19} [MODELO]. Según «Por qué hay episodios críticos en febrero–marzo y octubre–noviembre»: En las épocas secas la radiación solar calienta la superficie y genera turbulencia que mezcla el aire y saca los contaminantes del valle. En las temporadas de transición hacia las lluvias (febrero–abril y octubre–noviembre) se forma con frecuencia una capa de nubes bajas que reduce la radiación, estabiliza la atmósfera y disminuye la altura de mezcla. [SIATA-VALLE]"
     },
     {
       "id": "P09",
@@ -255,7 +255,7 @@
       "citas": [],
       "cito_fuente": true,
       "contenido_correcto": true,
-      "segundos": 0.0,
+      "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,
       "respuesta": "No pude consultar la medición: La fecha 2021-05-01 está fuera del histórico disponible (2019-02-21 a 2020-02-20). Los datos son históricos de SIATA."
@@ -283,16 +283,15 @@
       "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,
-      "respuesta": "Para el 2019-08-18 el modelo pronostica «Aceptable» (Buena 1%, Aceptable 94%, Dañina 5%); el estado latente actual es «Episodio crítico» [MODELO]. Según «Amarillo – Aceptable (13 a 37 µg/m³)»: La calidad del aire es aceptable. Personas excepcionalmente sensibles a algún contaminante podrían presentar síntomas, por lo que no se les recomienda permanecer al aire libre por tiempos prolongados. [SALUD] Esta información es orientativa y no es consejo médico."
+      "respuesta": "Para el 2019-08-18 el modelo pronostica «Aceptable» (Buena 1%, Aceptable 94%, Dañina 5%); el estado latente actual es «Elevado» [MODELO]. Según «Amarillo – Aceptable (13 a 37 µg/m³)»: La calidad del aire es aceptable. Personas excepcionalmente sensibles a algún contaminante podrían presentar síntomas, por lo que no se les recomienda permanecer al aire libre por tiempos prolongados. [SALUD] Esta información es orientativa y no es consejo médico."
     },
     {
       "id": "P12",
-      "pregunta": "¿Qué significa el estado 'Episodio crítico' del modelo HMM?",
+      "pregunta": "¿Qué significa el estado 'Elevado' del modelo HMM?",
       "esperadas": [
         "search_docs"
       ],
       "usadas": [
-        "estado_regional",
         "search_docs"
       ],
       "herramienta_correcta": true,
@@ -300,17 +299,14 @@
         "METODOLOGIA"
       ],
       "citas": [
-        "SIATA-DATOS",
-        "RES2254-NIVELES",
-        "MODELO",
         "METODOLOGIA"
       ],
       "cito_fuente": true,
       "contenido_correcto": true,
-      "segundos": 0.01,
+      "segundos": 0.0,
       "backend_real": "offline",
       "aviso": null,
-      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Episodio crítico': 19} [MODELO]. Según «Estado latente con un modelo oculto de Markov (HMM)»: Un HMM gaussiano de tres estados, implementado por el equipo con el algoritmo de Baum-Welch, modela el logaritmo del PM2.5 diario de cada estación. Los estados se ordenan por su media y se nombran Normal (media cercana a 11 µg/m³), Alerta (cerca de 18 µg/m³) y Episodio crítico (cerca de 30 µg/m³). [METODOLOGIA]"
+      "respuesta": "Según «Estado latente con un modelo oculto de Markov (HMM)»: Un HMM gaussiano de tres estados, implementado por el equipo con el algoritmo de Baum-Welch, modela el logaritmo del PM2.5 diario de cada estación. Los estados se ordenan por su media y se nombran Bajo (media cercana a 11 µg/m³), Moderado (cerca de 18 µg/m³) y Elevado (cerca de 30 µg/m³). [METODOLOGIA]"
     },
     {
       "id": "P13",
@@ -337,7 +333,7 @@
       "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,
-      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Episodio crítico': 19} [MODELO]. Según «Umbrales de PM2.5 para cada nivel»: Según la tabla 4 de la resolución, para PM2.5 con exposición de 24 horas: nivel de Prevención entre 38 y 55 µg/m³, nivel de Alerta entre 56 y 150 µg/m³ y nivel de Emergencia a partir de 151 µg/m³. Para PM10 los rangos son 155–254 (prevención), 255–354 (alerta) y 355 µg/m³ o más (emergencia). [RES2254-NIVELES]"
+      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Elevado': 19} [MODELO]. Según «Umbrales de PM2.5 para cada nivel»: Según la tabla 4 de la resolución, para PM2.5 con exposición de 24 horas: nivel de Prevención entre 38 y 55 µg/m³, nivel de Alerta entre 56 y 150 µg/m³ y nivel de Emergencia a partir de 151 µg/m³. Para PM10 los rangos son 155–254 (prevención), 255–354 (alerta) y 355 µg/m³ o más (emergencia). [RES2254-NIVELES]"
     },
     {
       "id": "P14",
@@ -390,7 +386,7 @@
       "segundos": 0.01,
       "backend_real": "offline",
       "aviso": null,
-      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Episodio crítico': 19} [MODELO]. Según «Cómo se calcula la declaratoria»: La declaratoria puede hacerse por constatación (mediciones) o por pronóstico con modelos (artículo 11). Con monitoreo automático, se declara el nivel cuando las medias móviles de 24 horas permanecen dentro del rango correspondiente durante más del 75 % del tiempo en un periodo de 48 horas consecutivas. [RES2254-NIVELES]"
+      "respuesta": "El 2019-03-15 el promedio de las estaciones poblacionales fue 47.4 µg/m³ y el 100.0 % superó la norma diaria de 37 µg/m³; nivel prevención (indicativo) [SIATA-DATOS] [RES2254-NIVELES]. Estados HMM: {'Elevado': 19} [MODELO]. Según «Cómo se calcula la declaratoria»: La declaratoria puede hacerse por constatación (mediciones) o por pronóstico con modelos (artículo 11). Con monitoreo automático, se declara el nivel cuando las medias móviles de 24 horas permanecen dentro del rango correspondiente durante más del 75 % del tiempo en un periodo de 48 horas consecutivas. [RES2254-NIVELES]"
     }
   ]
 }
