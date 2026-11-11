@@ -7,7 +7,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 3,2019-02-26,48.5,24,89.0,Dañina a la salud de grupos sensibles,Dañina
 3,2019-02-27,42.54,24,65.0,Dañina a la salud de grupos sensibles,Dañina
 3,2019-02-28,32.83,24,57.0,Aceptable,Aceptable
-3,2019-03-01,37.04,24,60.0,Aceptable,Dañina
+3,2019-03-01,37.04,24,60.0,Aceptable,Aceptable
 3,2019-03-02,32.62,24,65.0,Aceptable,Aceptable
 3,2019-03-03,25.54,24,41.0,Aceptable,Aceptable
 3,2019-03-04,31.48,23,54.0,Aceptable,Aceptable
@@ -72,7 +72,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 3,2019-05-04,18.17,24,33.0,Aceptable,Aceptable
 3,2019-05-05,15.54,24,26.0,Aceptable,Aceptable
 3,2019-05-06,16.08,24,50.0,Aceptable,Aceptable
-3,2019-05-07,12.04,24,27.0,Buena,Aceptable
+3,2019-05-07,12.04,24,27.0,Buena,Buena
 3,2019-05-08,15.62,24,31.0,Aceptable,Aceptable
 3,2019-05-09,16.62,24,39.0,Aceptable,Aceptable
 3,2019-05-10,12.79,24,25.0,Aceptable,Aceptable
@@ -328,7 +328,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 3,2020-01-21,14.5,24,31.0,Aceptable,Aceptable
 3,2020-01-22,17.17,24,26.0,Aceptable,Aceptable
 3,2020-01-23,19.0,22,56.0,Aceptable,Aceptable
-3,2020-01-24,12.04,24,34.0,Buena,Aceptable
+3,2020-01-24,12.04,24,34.0,Buena,Buena
 3,2020-01-25,10.17,24,23.0,Buena,Buena
 3,2020-01-26,9.54,24,31.0,Buena,Buena
 3,2020-01-27,12.67,24,38.0,Aceptable,Aceptable
@@ -864,7 +864,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 25,2019-07-17,14.5,24,27.0,Aceptable,Aceptable
 25,2019-07-18,13.57,23,30.0,Aceptable,Aceptable
 25,2019-07-19,13.67,24,30.0,Aceptable,Aceptable
-25,2019-07-20,12.04,24,28.0,Buena,Aceptable
+25,2019-07-20,12.04,24,28.0,Buena,Buena
 25,2019-07-21,11.17,24,34.0,Buena,Buena
 25,2019-07-22,15.23,22,26.0,Aceptable,Aceptable
 25,2019-07-23,12.91,23,28.0,Aceptable,Aceptable
@@ -925,7 +925,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 25,2019-09-16,11.83,23,19.0,Buena,Buena
 25,2019-09-17,14.64,22,29.0,Aceptable,Aceptable
 25,2019-09-18,20.27,22,34.0,Aceptable,Aceptable
-25,2019-09-19,12.04,24,27.0,Buena,Aceptable
+25,2019-09-19,12.04,24,27.0,Buena,Buena
 25,2019-09-20,18.67,21,32.0,Aceptable,Aceptable
 25,2019-09-21,15.62,21,28.0,Aceptable,Aceptable
 25,2019-09-22,14.09,23,31.0,Aceptable,Aceptable
@@ -1701,7 +1701,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 31,2019-11-14,18.04,24,35.0,Aceptable,Aceptable
 31,2019-11-15,17.96,24,50.0,Aceptable,Aceptable
 31,2019-11-16,8.76,21,21.0,Buena,Buena
-31,2019-11-17,12.04,24,35.0,Buena,Aceptable
+31,2019-11-17,12.04,24,35.0,Buena,Buena
 31,2019-11-18,12.21,24,25.0,Aceptable,Aceptable
 31,2019-11-19,10.3,23,25.0,Buena,Buena
 31,2019-11-20,18.12,24,39.0,Aceptable,Aceptable
@@ -4260,7 +4260,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 80,2020-01-13,14.83,24,32.567,Aceptable,Aceptable
 80,2020-01-14,14.78,23,31.1656,Aceptable,Aceptable
 80,2020-01-15,18.63,24,34.3371,Aceptable,Aceptable
-80,2020-01-16,12.04,21,19.286,Buena,Aceptable
+80,2020-01-16,12.04,21,19.286,Buena,Buena
 80,2020-01-17,10.76,22,27.576,Buena,Buena
 80,2020-01-18,7.37,23,15.7224,Buena,Buena
 80,2020-01-19,9.93,23,23.2529,Buena,Buena
@@ -4332,7 +4332,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 81,2019-03-26,27.48,24,37.3184,Aceptable,Aceptable
 81,2019-03-27,35.15,21,46.7738,Aceptable,Aceptable
 81,2019-03-28,30.98,20,50.3816,Aceptable,Aceptable
-81,2019-03-29,12.04,24,20.7946,Buena,Aceptable
+81,2019-03-29,12.04,24,20.7946,Buena,Buena
 81,2019-03-30,19.79,24,33.5407,Aceptable,Aceptable
 81,2019-03-31,18.26,24,27.7516,Aceptable,Aceptable
 81,2019-04-01,9.86,21,16.4718,Buena,Buena
@@ -4530,7 +4530,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 81,2019-10-16,9.68,23,19.6649,Buena,Buena
 81,2019-10-17,6.85,22,13.1958,Buena,Buena
 81,2019-10-18,9.16,23,19.4611,Buena,Buena
-81,2019-10-19,12.05,23,22.7737,Aceptable,Aceptable
+81,2019-10-19,12.05,23,22.7737,Aceptable,Buena
 81,2019-10-20,5.16,23,10.3927,Buena,Buena
 81,2019-10-21,7.86,23,17.1328,Buena,Buena
 81,2019-10-22,8.6,23,18.4787,Buena,Buena
@@ -4575,7 +4575,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 81,2019-11-30,11.1,23,25.1643,Buena,Buena
 81,2019-12-01,9.77,23,19.7399,Buena,Buena
 81,2019-12-02,11.0,24,17.5589,Buena,Buena
-81,2019-12-03,12.04,24,18.4009,Buena,Aceptable
+81,2019-12-03,12.04,24,18.4009,Buena,Buena
 81,2019-12-04,11.88,22,18.4906,Buena,Buena
 81,2019-12-05,11.21,24,21.9191,Buena,Buena
 81,2019-12-06,11.47,24,16.1544,Buena,Buena
@@ -4846,7 +4846,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 82,2019-08-29,16.2,24,29.2571,Aceptable,Aceptable
 82,2019-08-30,22.95,24,42.6036,Aceptable,Aceptable
 82,2019-08-31,20.6,24,41.4184,Aceptable,Aceptable
-82,2019-09-01,12.05,22,21.0489,Aceptable,Aceptable
+82,2019-09-01,12.05,22,21.0489,Aceptable,Buena
 82,2019-09-02,12.73,22,18.7306,Aceptable,Aceptable
 82,2019-09-03,12.37,23,26.0813,Aceptable,Aceptable
 82,2019-09-04,8.97,24,16.4478,Buena,Buena
@@ -4885,7 +4885,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 82,2019-10-07,8.14,24,16.718,Buena,Buena
 82,2019-10-08,11.38,24,21.8946,Buena,Buena
 82,2019-10-09,14.48,23,26.1784,Aceptable,Aceptable
-82,2019-10-10,12.03,24,20.3624,Buena,Aceptable
+82,2019-10-10,12.03,24,20.3624,Buena,Buena
 82,2019-10-11,16.48,24,25.3543,Aceptable,Aceptable
 82,2019-10-12,15.86,24,32.3946,Aceptable,Aceptable
 82,2019-10-13,10.15,24,23.8313,Buena,Buena
@@ -4961,7 +4961,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 82,2019-12-24,12.35,23,29.7306,Aceptable,Aceptable
 82,2019-12-25,11.76,19,24.9506,Buena,Buena
 82,2019-12-26,6.88,24,14.2426,Buena,Buena
-82,2019-12-27,12.03,24,17.7869,Buena,Aceptable
+82,2019-12-27,12.03,24,17.7869,Buena,Buena
 82,2019-12-28,14.28,24,34.1415,Aceptable,Aceptable
 82,2019-12-29,14.2,24,22.4614,Aceptable,Aceptable
 82,2019-12-30,15.1,24,25.4842,Aceptable,Aceptable
@@ -5693,7 +5693,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 84,2020-01-09,13.47,24,23.2722,Aceptable,Aceptable
 84,2020-01-10,15.32,24,33.5641,Aceptable,Aceptable
 84,2020-01-11,11.83,24,27.9004,Buena,Buena
-84,2020-01-12,12.04,23,20.4271,Buena,Aceptable
+84,2020-01-12,12.04,23,20.4271,Buena,Buena
 84,2020-01-13,15.0,24,33.9102,Aceptable,Aceptable
 84,2020-01-19,8.84,24,18.1271,Buena,Buena
 84,2020-01-20,20.66,23,35.2413,Aceptable,Aceptable
@@ -5861,7 +5861,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 85,2019-07-02,11.33,24,32.2109,Buena,Buena
 85,2019-07-03,13.81,24,23.3546,Aceptable,Aceptable
 85,2019-07-04,12.26,24,23.5084,Aceptable,Aceptable
-85,2019-07-05,12.03,23,28.8796,Buena,Aceptable
+85,2019-07-05,12.03,23,28.8796,Buena,Buena
 85,2019-07-06,9.97,24,27.1442,Buena,Buena
 85,2019-07-07,8.08,24,16.0425,Buena,Buena
 85,2019-07-08,9.47,24,17.4189,Buena,Buena
@@ -5984,7 +5984,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 85,2019-11-03,14.85,21,25.7332,Aceptable,Aceptable
 85,2019-11-04,10.49,24,20.0473,Buena,Buena
 85,2019-11-05,18.9,24,33.7606,Aceptable,Aceptable
-85,2019-11-06,12.03,24,27.4077,Buena,Aceptable
+85,2019-11-06,12.03,24,27.4077,Buena,Buena
 85,2019-11-07,13.93,19,33.1707,Aceptable,Aceptable
 85,2019-11-08,13.88,21,23.2599,Aceptable,Aceptable
 85,2019-11-09,17.75,24,43.0945,Aceptable,Aceptable
@@ -6217,7 +6217,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 86,2019-07-04,17.13,24,26.856,Aceptable,Aceptable
 86,2019-07-05,15.41,24,40.0624,Aceptable,Aceptable
 86,2019-07-06,14.88,24,31.0107,Aceptable,Aceptable
-86,2019-07-07,12.05,24,33.1027,Aceptable,Aceptable
+86,2019-07-07,12.05,24,33.1027,Aceptable,Buena
 86,2019-07-08,11.43,24,21.9338,Buena,Buena
 86,2019-07-09,14.92,24,25.0764,Aceptable,Aceptable
 86,2019-07-10,14.1,24,25.2626,Aceptable,Aceptable
@@ -6531,7 +6531,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 87,2019-05-17,10.2,23,18.9779,Buena,Buena
 87,2019-05-18,13.39,24,29.8055,Aceptable,Aceptable
 87,2019-05-19,11.93,23,22.5049,Buena,Buena
-87,2019-05-20,12.05,24,28.4999,Aceptable,Aceptable
+87,2019-05-20,12.05,24,28.4999,Aceptable,Buena
 87,2019-05-21,15.73,24,35.8662,Aceptable,Aceptable
 87,2019-05-22,13.47,23,33.4939,Aceptable,Aceptable
 87,2019-05-23,13.97,23,23.5892,Aceptable,Aceptable
@@ -7405,7 +7405,7 @@ codigo,fecha,pm25,horas,pm25_max_hora,categoria_ica,clase
 90,2019-10-17,19.29,24,35.1048,Aceptable,Aceptable
 90,2019-10-18,18.48,24,35.513,Aceptable,Aceptable
 90,2019-10-19,11.17,23,27.1215,Buena,Buena
-90,2019-10-20,12.05,24,29.4956,Aceptable,Aceptable
+90,2019-10-20,12.05,24,29.4956,Aceptable,Buena
 90,2019-10-21,14.29,22,34.3508,Aceptable,Aceptable
 90,2019-10-22,18.86,24,42.5955,Aceptable,Aceptable
 90,2019-10-23,11.2,23,26.0215,Buena,Buena

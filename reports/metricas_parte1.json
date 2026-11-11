@@ -53,188 +53,188 @@
   "seleccion_hiperparametros": {
     "elegido": {
       "class_weight": "sqrt",
-      "l2": 0.01
+      "l2": 0.001
     },
     "tabla_cv_entrenamiento": [
       {
-        "class_weight": "balanced",
-        "l2": 0.001,
-        "macro_f1_cv": 0.5856148257593375,
-        "log_loss_cv": 0.5163055827867433
-      },
-      {
         "class_weight": "sqrt",
         "l2": 0.001,
-        "macro_f1_cv": 0.5854411444179444,
-        "log_loss_cv": 0.4407813288365176
+        "macro_f1_cv": 0.5860321002886556,
+        "log_loss_cv": 0.4413924680451526
       },
       {
         "class_weight": "sqrt",
         "l2": 0.01,
-        "macro_f1_cv": 0.5835284258329614,
-        "log_loss_cv": 0.4275592050213116
+        "macro_f1_cv": 0.5804466887232896,
+        "log_loss_cv": 0.4316336936953958
+      },
+      {
+        "class_weight": "balanced",
+        "l2": 0.001,
+        "macro_f1_cv": 0.5796351754267433,
+        "log_loss_cv": 0.5197882809405984
       },
       {
         "class_weight": null,
         "l2": 0.01,
-        "macro_f1_cv": 0.5710526593171192,
-        "log_loss_cv": 0.40861480213578816
+        "macro_f1_cv": 0.5738475323153859,
+        "log_loss_cv": 0.4098707690237754
       },
       {
         "class_weight": "balanced",
         "l2": 0.01,
-        "macro_f1_cv": 0.5637048108019338,
-        "log_loss_cv": 0.5288670183246468
+        "macro_f1_cv": 0.560296635652766,
+        "log_loss_cv": 0.5361019620905706
       },
       {
         "class_weight": "sqrt",
         "l2": 0.1,
-        "macro_f1_cv": 0.5573872305159193,
-        "log_loss_cv": 0.47995707149454264
+        "macro_f1_cv": 0.5566232639608948,
+        "log_loss_cv": 0.48224211515828425
       },
       {
         "class_weight": null,
         "l2": 0.1,
-        "macro_f1_cv": 0.55398169524061,
-        "log_loss_cv": 0.43143831910004893
+        "macro_f1_cv": 0.5546676226733793,
+        "log_loss_cv": 0.4337505172594093
       },
       {
         "class_weight": null,
         "l2": 0.001,
-        "macro_f1_cv": 0.5515363630152509,
-        "log_loss_cv": 0.4352441598521647
+        "macro_f1_cv": 0.5534360361594766,
+        "log_loss_cv": 0.4347986613466374
       },
       {
         "class_weight": "balanced",
         "l2": 0.1,
-        "macro_f1_cv": 0.5260313522502738,
-        "log_loss_cv": 0.6425547865691705
+        "macro_f1_cv": 0.5242854083635818,
+        "log_loss_cv": 0.6447342687040221
       }
     ]
   },
   "clasificacion_dia_siguiente": {
     "Regresión logística + estados HMM": {
-      "accuracy": 0.7823949955317248,
-      "macro_f1": 0.5806708426547352,
-      "balanced_accuracy": 0.7282882993255809,
+      "accuracy": 0.7680965147453083,
+      "macro_f1": 0.5742893062982158,
+      "balanced_accuracy": 0.7366978225585621,
       "per_class": {
         "Buena": {
-          "precision": 0.41274238227146814,
-          "recall": 0.5643939393939394,
-          "f1": 0.4768,
-          "soporte": 264
+          "precision": 0.3994910941475827,
+          "recall": 0.5793357933579336,
+          "f1": 0.47289156626506024,
+          "soporte": 271
         },
         "Aceptable": {
-          "precision": 0.9263473053892216,
-          "recall": 0.8116474291710388,
-          "f1": 0.8652125279642058,
-          "soporte": 1906
+          "precision": 0.9261538461538461,
+          "recall": 0.7925223802001053,
+          "f1": 0.8541430192962542,
+          "soporte": 1899
         },
         "Dañina": {
-          "precision": 0.26570048309178745,
-          "recall": 0.8088235294117647,
-          "f1": 0.4,
+          "precision": 0.2590909090909091,
+          "recall": 0.8382352941176471,
+          "f1": 0.3958333333333333,
           "soporte": 68
         }
       },
       "confusion_matrix": [
         [
-          149,
-          110,
+          157,
+          109,
           5
         ],
         [
-          212,
-          1547,
-          147
+          236,
+          1505,
+          158
         ],
         [
           0,
-          13,
-          55
+          11,
+          57
         ]
       ],
       "n": 2238,
       "excedencia_norma": {
-        "precision": 0.26570048309178745,
-        "recall": 0.8088235294117647,
-        "f1": 0.4,
-        "vp": 55,
-        "fp": 152,
-        "fn": 13
+        "precision": 0.2590909090909091,
+        "recall": 0.8382352941176471,
+        "f1": 0.3958333333333333,
+        "vp": 57,
+        "fp": 163,
+        "fn": 11
       },
-      "log_loss": 0.5013621584022789,
-      "brier": 0.3047447166261283
+      "log_loss": 0.5216393594140266,
+      "brier": 0.3195313006903097
     },
     "Regresión logística sin HMM (ablación)": {
-      "accuracy": 0.7926720285969616,
-      "macro_f1": 0.5829715360962126,
-      "balanced_accuracy": 0.714530731049773,
+      "accuracy": 0.7828418230563002,
+      "macro_f1": 0.5829827786761509,
+      "balanced_accuracy": 0.731945531749714,
       "per_class": {
         "Buena": {
-          "precision": 0.42024539877300615,
-          "recall": 0.5189393939393939,
-          "f1": 0.46440677966101696,
-          "soporte": 264
+          "precision": 0.4140845070422535,
+          "recall": 0.5424354243542435,
+          "f1": 0.4696485623003195,
+          "soporte": 271
         },
         "Aceptable": {
-          "precision": 0.9219569015725102,
-          "recall": 0.8305351521511017,
-          "f1": 0.8738614407949213,
-          "soporte": 1906
+          "precision": 0.924179104477612,
+          "recall": 0.8151658767772512,
+          "f1": 0.8662562954672636,
+          "soporte": 1899
         },
         "Dañina": {
-          "precision": 0.27692307692307694,
-          "recall": 0.7941176470588235,
-          "f1": 0.41064638783269963,
+          "precision": 0.27403846153846156,
+          "recall": 0.8382352941176471,
+          "f1": 0.41304347826086957,
           "soporte": 68
         }
       },
       "confusion_matrix": [
         [
-          137,
-          120,
-          7
+          147,
+          116,
+          8
         ],
         [
-          189,
-          1583,
-          134
+          208,
+          1548,
+          143
         ],
         [
           0,
-          14,
-          54
+          11,
+          57
         ]
       ],
       "n": 2238,
       "excedencia_norma": {
-        "precision": 0.27692307692307694,
-        "recall": 0.7941176470588235,
-        "f1": 0.41064638783269963,
-        "vp": 54,
-        "fp": 141,
-        "fn": 14
+        "precision": 0.27403846153846156,
+        "recall": 0.8382352941176471,
+        "f1": 0.41304347826086957,
+        "vp": 57,
+        "fp": 151,
+        "fn": 11
       },
-      "log_loss": 0.5161950384772771,
-      "brier": 0.30790037925028463
+      "log_loss": 0.5304254015424662,
+      "brier": 0.3196945676242163
     },
     "Naive Bayes gaussiano + estados HMM": {
-      "accuracy": 0.6385165326184093,
-      "macro_f1": 0.4808769008582366,
-      "balanced_accuracy": 0.7344334026020342,
+      "accuracy": 0.6407506702412868,
+      "macro_f1": 0.48436317487645925,
+      "balanced_accuracy": 0.7356111935805725,
       "per_class": {
         "Buena": {
-          "precision": 0.30085470085470084,
-          "recall": 0.6666666666666666,
-          "f1": 0.41460541813898705,
-          "soporte": 264
+          "precision": 0.31046312178387653,
+          "recall": 0.6678966789667896,
+          "f1": 0.423887587822014,
+          "soporte": 271
         },
         "Aceptable": {
-          "precision": 0.931924882629108,
-          "recall": 0.6248688352570829,
-          "f1": 0.7481155778894474,
-          "soporte": 1906
+          "precision": 0.93046875,
+          "recall": 0.627172195892575,
+          "f1": 0.7492922302610883,
+          "soporte": 1899
         },
         "Dañina": {
           "precision": 0.16533333333333333,
@@ -245,12 +245,12 @@
       },
       "confusion_matrix": [
         [
-          176,
-          82,
+          181,
+          84,
           6
         ],
         [
-          408,
+          401,
           1191,
           307
         ],
@@ -269,25 +269,25 @@
         "fp": 313,
         "fn": 6
       },
-      "log_loss": 2.1221807244293864,
-      "brier": 0.6559911723912615
+      "log_loss": 2.093279755074618,
+      "brier": 0.6509930842602544
     },
     "HMM solo (pronóstico a un paso)": {
-      "accuracy": 0.8337801608579088,
-      "macro_f1": 0.44558714691007767,
-      "balanced_accuracy": 0.45251571327122214,
+      "accuracy": 0.8342269883824843,
+      "macro_f1": 0.4486664331882431,
+      "balanced_accuracy": 0.4542541002029294,
       "per_class": {
         "Buena": {
-          "precision": 0.4264705882352941,
-          "recall": 0.4393939393939394,
-          "f1": 0.43283582089552236,
-          "soporte": 264
+          "precision": 0.4411764705882353,
+          "recall": 0.44280442804428044,
+          "f1": 0.4419889502762431,
+          "soporte": 271
         },
         "Aceptable": {
-          "precision": 0.8901322482197355,
-          "recall": 0.9181532004197271,
-          "f1": 0.9039256198347106,
-          "soporte": 1906
+          "precision": 0.8886063072227874,
+          "recall": 0.9199578725645077,
+          "f1": 0.9040103492884864,
+          "soporte": 1899
         },
         "Dañina": {
           "precision": 0.0,
@@ -298,13 +298,13 @@
       },
       "confusion_matrix": [
         [
-          116,
-          148,
+          120,
+          151,
           0
         ],
         [
-          156,
-          1750,
+          152,
+          1747,
           0
         ],
         [
@@ -322,25 +322,25 @@
         "fp": 0,
         "fn": 68
       },
-      "log_loss": 0.41073639681036056,
-      "brier": 0.24106716345525014
+      "log_loss": 0.41316685174644674,
+      "brier": 0.24268604322688545
     },
     "Línea base: persistencia": {
       "accuracy": 0.8306523681858803,
-      "macro_f1": 0.5895162167780653,
-      "balanced_accuracy": 0.5876650431230396,
+      "macro_f1": 0.594382340193372,
+      "balanced_accuracy": 0.5925337838082404,
       "per_class": {
         "Buena": {
-          "precision": 0.4188679245283019,
-          "recall": 0.42045454545454547,
-          "f1": 0.41965973534971646,
-          "soporte": 264
+          "precision": 0.4338235294117647,
+          "recall": 0.4354243542435424,
+          "f1": 0.43462246777163904,
+          "soporte": 271
         },
         "Aceptable": {
-          "precision": 0.9008914525432616,
-          "recall": 0.9013641133263379,
-          "f1": 0.9011277209546289,
-          "soporte": 1906
+          "precision": 0.9005263157894737,
+          "recall": 0.9010005265929436,
+          "f1": 0.900763358778626,
+          "soporte": 1899
         },
         "Dañina": {
           "precision": 0.45454545454545453,
@@ -351,13 +351,13 @@
       },
       "confusion_matrix": [
         [
-          111,
+          118,
           151,
           2
         ],
         [
           154,
-          1718,
+          1711,
           34
         ],
         [
@@ -377,21 +377,21 @@
       }
     },
     "Línea base: climatología (frecuencias)": {
-      "accuracy": 0.8516532618409294,
-      "macro_f1": 0.30662805662805664,
+      "accuracy": 0.8485254691689008,
+      "macro_f1": 0.3060188542422045,
       "balanced_accuracy": 0.3333333333333333,
       "per_class": {
         "Buena": {
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0,
-          "soporte": 264
+          "soporte": 271
         },
         "Aceptable": {
-          "precision": 0.8516532618409294,
+          "precision": 0.8485254691689008,
           "recall": 1.0,
-          "f1": 0.9198841698841699,
-          "soporte": 1906
+          "f1": 0.9180565627266135,
+          "soporte": 1899
         },
         "Dañina": {
           "precision": 0.0,
@@ -403,12 +403,12 @@
       "confusion_matrix": [
         [
           0,
-          264,
+          271,
           0
         ],
         [
           0,
-          1906,
+          1899,
           0
         ],
         [
@@ -426,46 +426,46 @@
         "fp": 0,
         "fn": 68
       },
-      "log_loss": 0.5237682069665167,
-      "brier": 0.27357047685879504
+      "log_loss": 0.5291185189012877,
+      "brier": 0.2777820333307585
     }
   },
   "validacion_temporal_promedio": {
     "HMM solo (pronóstico a un paso)": {
-      "accuracy": 0.8216,
-      "macro_f1": 0.4532,
-      "balanced_accuracy": 0.4573,
+      "accuracy": 0.8213,
+      "macro_f1": 0.4544,
+      "balanced_accuracy": 0.4577,
       "f1_excedencia": 0.0
     },
     "Línea base: climatología (frecuencias)": {
-      "accuracy": 0.8336,
-      "macro_f1": 0.3283,
+      "accuracy": 0.8306,
+      "macro_f1": 0.3276,
       "balanced_accuracy": 0.3611,
       "f1_excedencia": 0.0
     },
     "Línea base: persistencia": {
-      "accuracy": 0.816,
-      "macro_f1": 0.5077,
-      "balanced_accuracy": 0.5034,
+      "accuracy": 0.8152,
+      "macro_f1": 0.5106,
+      "balanced_accuracy": 0.5065,
       "f1_excedencia": 0.158
     },
     "Naive Bayes gaussiano + estados HMM": {
-      "accuracy": 0.6618,
-      "macro_f1": 0.4598,
-      "balanced_accuracy": 0.616,
+      "accuracy": 0.6629,
+      "macro_f1": 0.4617,
+      "balanced_accuracy": 0.6164,
       "f1_excedencia": 0.1794
     },
     "Regresión logística + estados HMM": {
-      "accuracy": 0.8045,
-      "macro_f1": 0.52,
-      "balanced_accuracy": 0.5453,
-      "f1_excedencia": 0.1823
+      "accuracy": 0.8043,
+      "macro_f1": 0.5246,
+      "balanced_accuracy": 0.5579,
+      "f1_excedencia": 0.1963
     },
     "Regresión logística sin HMM (ablación)": {
-      "accuracy": 0.8204,
-      "macro_f1": 0.5176,
-      "balanced_accuracy": 0.5278,
-      "f1_excedencia": 0.181
+      "accuracy": 0.8138,
+      "macro_f1": 0.524,
+      "balanced_accuracy": 0.5455,
+      "f1_excedencia": 0.197
     }
   }
 }

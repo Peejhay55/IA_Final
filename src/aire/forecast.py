@@ -91,7 +91,7 @@ class TrainedModels:
 
 # Hiperparámetros por defecto (los elegidos por ``select_hyperparams`` en la corrida
 # documentada en reports/metricas_parte1.json).
-DEFAULT_HP = {"class_weight": "sqrt", "l2": 1e-2}
+DEFAULT_HP = {"class_weight": "sqrt", "l2": 1e-3}
 NO_HMM = [f for f in FEATURES if not f.startswith("p_")]
 
 

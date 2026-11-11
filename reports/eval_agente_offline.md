@@ -37,7 +37,7 @@
 
 **P03. ¿Qué calidad del aire se espera mañana en Itagüí?**
 
-> En ITA-CJUS (Itagüí) el PM2.5 promedio del 2019-03-15 fue 47.7 µg/m³, categoría ICA «Dañina a la salud de grupos sensibles» [SIATA-DATOS]. Para el 2019-03-16 el modelo pronostica «Dañina» (Buena 0%, Aceptable 25%, Dañina 75%); el estado latente actual es «Episodio crítico» [MODELO]. Según «Naranja – Dañina para grupos sensibles (38 a 55 µg/m³)»: Adultos mayores, niños y personas con afecciones pulmonares o cardiovasculares pueden verse afectados si hacen actividades al aire libre por tiempo prolongado. Se recomienda a los grupos sensibles reducir o evitar el ejercicio vigoroso al aire libre, en especial en las horas de mayor tráfico (aproximadamente 6:00–10:00 y 16:00–20:00), y preferir el transporte público para no aumentar las emisiones. [SALUD] Esta información es orientativa y no es consejo médico.
+> En ITA-CJUS (Itagüí) el PM2.5 promedio del 2019-03-15 fue 47.7 µg/m³, categoría ICA «Dañina a la salud de grupos sensibles» [SIATA-DATOS]. Para el 2019-03-16 el modelo pronostica «Dañina» (Buena 0%, Aceptable 27%, Dañina 73%); el estado latente actual es «Episodio crítico» [MODELO]. Según «Naranja – Dañina para grupos sensibles (38 a 55 µg/m³)»: Adultos mayores, niños y personas con afecciones pulmonares o cardiovasculares pueden verse afectados si hacen actividades al aire libre por tiempo prolongado. Se recomienda a los grupos sensibles reducir o evitar el ejercicio vigoroso al aire libre, en especial en las horas de mayor tráfico (aproximadamente 6:00–10:00 y 16:00–20:00), y preferir el transporte público para no aumentar las emisiones. [SALUD] Esta información es orientativa y no es consejo médico.
 
 **P04. ¿Había un episodio de contaminación en el Valle de Aburrá el 2019-03-17?**
 
@@ -69,7 +69,7 @@
 
 **P11. ¿Qué pronosticaba el modelo para el 17 de agosto de 2019 en Belén?**
 
-> Para el 2019-08-18 el modelo pronostica «Aceptable» (Buena 1%, Aceptable 90%, Dañina 9%); el estado latente actual es «Episodio crítico» [MODELO]. Según «Amarillo – Aceptable (13 a 37 µg/m³)»: La calidad del aire es aceptable. Personas excepcionalmente sensibles a algún contaminante podrían presentar síntomas, por lo que no se les recomienda permanecer al aire libre por tiempos prolongados. [SALUD] Esta información es orientativa y no es consejo médico.
+> Para el 2019-08-18 el modelo pronostica «Aceptable» (Buena 1%, Aceptable 94%, Dañina 5%); el estado latente actual es «Episodio crítico» [MODELO]. Según «Amarillo – Aceptable (13 a 37 µg/m³)»: La calidad del aire es aceptable. Personas excepcionalmente sensibles a algún contaminante podrían presentar síntomas, por lo que no se les recomienda permanecer al aire libre por tiempos prolongados. [SALUD] Esta información es orientativa y no es consejo médico.
 
 **P12. ¿Qué significa el estado 'Episodio crítico' del modelo HMM?**
 
