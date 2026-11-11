@@ -1,0 +1,462 @@
+{
+  "particion": {
+    "entrenamiento": "2019-02-21 a 2019-10-31",
+    "prueba": "2019-11-01 a 2020-02-20",
+    "n_prueba": 2238
+  },
+  "hmm": {
+    "estados": [
+      "Normal",
+      "Alerta",
+      "Episodio crítico"
+    ],
+    "media_pm25_por_estado": [
+      11.5,
+      17.7,
+      30.0
+    ],
+    "desv_log": [
+      0.272,
+      0.218,
+      0.285
+    ],
+    "matriz_transicion": [
+      [
+        0.942,
+        0.058,
+        0.0
+      ],
+      [
+        0.044,
+        0.926,
+        0.03
+      ],
+      [
+        0.0,
+        0.056,
+        0.944
+      ]
+    ],
+    "duracion_esperada_dias": [
+      17.2,
+      13.4,
+      17.9
+    ],
+    "iteraciones_em": 10,
+    "loglik_prueba_por_obs": {
+      "HMM-1": -0.4717,
+      "HMM-2": -0.2493,
+      "HMM-3": -0.1658,
+      "HMM-4": -0.1241
+    }
+  },
+  "seleccion_hiperparametros": {
+    "elegido": {
+      "class_weight": "sqrt",
+      "l2": 0.001
+    },
+    "tabla_cv_entrenamiento": [
+      {
+        "class_weight": "sqrt",
+        "l2": 0.001,
+        "macro_f1_cv": 0.5849178860530043
+      },
+      {
+        "class_weight": "balanced",
+        "l2": 0.001,
+        "macro_f1_cv": 0.5848082176543647
+      },
+      {
+        "class_weight": "sqrt",
+        "l2": 0.01,
+        "macro_f1_cv": 0.5832288271664854
+      },
+      {
+        "class_weight": null,
+        "l2": 0.01,
+        "macro_f1_cv": 0.5712838983141046
+      },
+      {
+        "class_weight": null,
+        "l2": 0.1,
+        "macro_f1_cv": 0.5602336504773381
+      },
+      {
+        "class_weight": "balanced",
+        "l2": 0.01,
+        "macro_f1_cv": 0.5597267517110542
+      },
+      {
+        "class_weight": "sqrt",
+        "l2": 0.1,
+        "macro_f1_cv": 0.5576463929407065
+      },
+      {
+        "class_weight": null,
+        "l2": 0.001,
+        "macro_f1_cv": 0.5504789095338676
+      },
+      {
+        "class_weight": "balanced",
+        "l2": 0.1,
+        "macro_f1_cv": 0.5246753128349237
+      }
+    ]
+  },
+  "clasificacion_dia_siguiente": {
+    "Regresión logística + estados HMM": {
+      "accuracy": 0.7694369973190348,
+      "macro_f1": 0.5721385542656408,
+      "balanced_accuracy": 0.7359339646698452,
+      "per_class": {
+        "Buena": {
+          "precision": 0.3958333333333333,
+          "recall": 0.5757575757575758,
+          "f1": 0.4691358024691358,
+          "soporte": 264
+        },
+        "Aceptable": {
+          "precision": 0.9276517473942366,
+          "recall": 0.7938090241343126,
+          "f1": 0.855527283008199,
+          "soporte": 1906
+        },
+        "Dañina": {
+          "precision": 0.2556053811659193,
+          "recall": 0.8382352941176471,
+          "f1": 0.3917525773195877,
+          "soporte": 68
+        }
+      },
+      "confusion_matrix": [
+        [
+          152,
+          107,
+          5
+        ],
+        [
+          232,
+          1513,
+          161
+        ],
+        [
+          0,
+          11,
+          57
+        ]
+      ],
+      "n": 2238,
+      "excedencia_norma": {
+        "precision": 0.2556053811659193,
+        "recall": 0.8382352941176471,
+        "f1": 0.3917525773195877,
+        "vp": 57,
+        "fp": 166,
+        "fn": 11
+      },
+      "log_loss": 0.5200655696911889,
+      "brier": 0.3182691022620769
+    },
+    "Regresión logística sin HMM (ablación)": {
+      "accuracy": 0.7770330652368186,
+      "macro_f1": 0.571705785213552,
+      "balanced_accuracy": 0.7269418928498615,
+      "per_class": {
+        "Buena": {
+          "precision": 0.4051724137931034,
+          "recall": 0.5340909090909091,
+          "f1": 0.46078431372549017,
+          "soporte": 264
+        },
+        "Aceptable": {
+          "precision": 0.9244151169766047,
+          "recall": 0.8084994753410283,
+          "f1": 0.8625804645955779,
+          "soporte": 1906
+        },
+        "Dañina": {
+          "precision": 0.2556053811659193,
+          "recall": 0.8382352941176471,
+          "f1": 0.3917525773195877,
+          "soporte": 68
+        }
+      },
+      "confusion_matrix": [
+        [
+          141,
+          115,
+          8
+        ],
+        [
+          207,
+          1541,
+          158
+        ],
+        [
+          0,
+          11,
+          57
+        ]
+      ],
+      "n": 2238,
+      "excedencia_norma": {
+        "precision": 0.2556053811659193,
+        "recall": 0.8382352941176471,
+        "f1": 0.3917525773195877,
+        "vp": 57,
+        "fp": 166,
+        "fn": 11
+      },
+      "log_loss": 0.5333046056480378,
+      "brier": 0.32213421063076847
+    },
+    "Naive Bayes gaussiano + estados HMM": {
+      "accuracy": 0.6389633601429848,
+      "macro_f1": 0.4812190129290821,
+      "balanced_accuracy": 0.7346082889259237,
+      "per_class": {
+        "Buena": {
+          "precision": 0.30085470085470084,
+          "recall": 0.6666666666666666,
+          "f1": 0.41460541813898705,
+          "soporte": 264
+        },
+        "Aceptable": {
+          "precision": 0.9319781078967944,
+          "recall": 0.6253934942287513,
+          "f1": 0.7485086342229199,
+          "soporte": 1906
+        },
+        "Dañina": {
+          "precision": 0.1657754010695187,
+          "recall": 0.9117647058823529,
+          "f1": 0.2805429864253393,
+          "soporte": 68
+        }
+      },
+      "confusion_matrix": [
+        [
+          176,
+          82,
+          6
+        ],
+        [
+          408,
+          1192,
+          306
+        ],
+        [
+          1,
+          5,
+          62
+        ]
+      ],
+      "n": 2238,
+      "excedencia_norma": {
+        "precision": 0.1657754010695187,
+        "recall": 0.9117647058823529,
+        "f1": 0.2805429864253393,
+        "vp": 62,
+        "fp": 312,
+        "fn": 6
+      },
+      "log_loss": 2.1162477166750993,
+      "brier": 0.655012275040109
+    },
+    "HMM solo (pronóstico a un paso)": {
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.44590998362737094,
+      "balanced_accuracy": 0.45342856688606953,
+      "per_class": {
+        "Buena": {
+          "precision": 0.4254545454545455,
+          "recall": 0.4431818181818182,
+          "f1": 0.43413729128014844,
+          "soporte": 264
+        },
+        "Aceptable": {
+          "precision": 0.8904737646459501,
+          "recall": 0.9171038824763903,
+          "f1": 0.9035926596019643,
+          "soporte": 1906
+        },
+        "Dañina": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "soporte": 68
+        }
+      },
+      "confusion_matrix": [
+        [
+          117,
+          147,
+          0
+        ],
+        [
+          158,
+          1748,
+          0
+        ],
+        [
+          0,
+          68,
+          0
+        ]
+      ],
+      "n": 2238,
+      "excedencia_norma": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "vp": 0,
+        "fp": 0,
+        "fn": 68
+      },
+      "log_loss": 0.410575187444288,
+      "brier": 0.241073220928267
+    },
+    "Línea base: persistencia": {
+      "accuracy": 0.8306523681858803,
+      "macro_f1": 0.5895162167780653,
+      "balanced_accuracy": 0.5876650431230396,
+      "per_class": {
+        "Buena": {
+          "precision": 0.4188679245283019,
+          "recall": 0.42045454545454547,
+          "f1": 0.41965973534971646,
+          "soporte": 264
+        },
+        "Aceptable": {
+          "precision": 0.9008914525432616,
+          "recall": 0.9013641133263379,
+          "f1": 0.9011277209546289,
+          "soporte": 1906
+        },
+        "Dañina": {
+          "precision": 0.45454545454545453,
+          "recall": 0.4411764705882353,
+          "f1": 0.4477611940298507,
+          "soporte": 68
+        }
+      },
+      "confusion_matrix": [
+        [
+          111,
+          151,
+          2
+        ],
+        [
+          154,
+          1718,
+          34
+        ],
+        [
+          0,
+          38,
+          30
+        ]
+      ],
+      "n": 2238,
+      "excedencia_norma": {
+        "precision": 0.45454545454545453,
+        "recall": 0.4411764705882353,
+        "f1": 0.4477611940298507,
+        "vp": 30,
+        "fp": 36,
+        "fn": 38
+      }
+    },
+    "Línea base: climatología (frecuencias)": {
+      "accuracy": 0.8516532618409294,
+      "macro_f1": 0.30662805662805664,
+      "balanced_accuracy": 0.3333333333333333,
+      "per_class": {
+        "Buena": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "soporte": 264
+        },
+        "Aceptable": {
+          "precision": 0.8516532618409294,
+          "recall": 1.0,
+          "f1": 0.9198841698841699,
+          "soporte": 1906
+        },
+        "Dañina": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "soporte": 68
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          264,
+          0
+        ],
+        [
+          0,
+          1906,
+          0
+        ],
+        [
+          0,
+          68,
+          0
+        ]
+      ],
+      "n": 2238,
+      "excedencia_norma": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "vp": 0,
+        "fp": 0,
+        "fn": 68
+      },
+      "log_loss": 0.5237682069665167,
+      "brier": 0.27357047685879504
+    }
+  },
+  "validacion_temporal_promedio": {
+    "HMM solo (pronóstico a un paso)": {
+      "accuracy": 0.8208,
+      "macro_f1": 0.4526,
+      "balanced_accuracy": 0.4569,
+      "f1_excedencia": 0.0
+    },
+    "Línea base: climatología (frecuencias)": {
+      "accuracy": 0.8336,
+      "macro_f1": 0.3283,
+      "balanced_accuracy": 0.3611,
+      "f1_excedencia": 0.0
+    },
+    "Línea base: persistencia": {
+      "accuracy": 0.816,
+      "macro_f1": 0.5077,
+      "balanced_accuracy": 0.5034,
+      "f1_excedencia": 0.158
+    },
+    "Naive Bayes gaussiano + estados HMM": {
+      "accuracy": 0.6614,
+      "macro_f1": 0.4593,
+      "balanced_accuracy": 0.6151,
+      "f1_excedencia": 0.1792
+    },
+    "Regresión logística + estados HMM": {
+      "accuracy": 0.8052,
+      "macro_f1": 0.5224,
+      "balanced_accuracy": 0.5558,
+      "f1_excedencia": 0.1957
+    },
+    "Regresión logística sin HMM (ablación)": {
+      "accuracy": 0.8153,
+      "macro_f1": 0.5254,
+      "balanced_accuracy": 0.5494,
+      "f1_excedencia": 0.2093
+    }
+  }
+}
