@@ -1,0 +1,419 @@
+{
+  "backend": "tfidf+faiss",
+  "sin_expansion": {
+    "n": 20,
+    "hit@1": 0.8,
+    "hit@3": 1.0,
+    "MRR": 0.8916666666666668,
+    "detalle": [
+      {
+        "consulta": "¿Cuál es la norma diaria de PM2.5 en Colombia?",
+        "esperado": "RES2254-NORMA",
+        "top3": [
+          "RES2254-ICA",
+          "RES2254-NORMA",
+          "METODOLOGIA"
+        ],
+        "rango": 2
+      },
+      {
+        "consulta": "límite anual de PM2.5 para 2030",
+        "esperado": "RES2254-NORMA",
+        "top3": [
+          "RES2254-NORMA",
+          "OMS2021",
+          "OMS2021"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "cuántas horas válidas se necesitan para un promedio diario",
+        "esperado": "RES2254-NORMA",
+        "top3": [
+          "RES2254-NORMA",
+          "RES2254-NORMA",
+          "OMS2021"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "fórmula para calcular el índice de calidad del aire",
+        "esperado": "RES2254-ICA",
+        "top3": [
+          "RES2254-ICA",
+          "RES2254-ICA",
+          "RES2254-ICA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "rangos de concentración de cada color del ICA",
+        "esperado": "RES2254-ICA",
+        "top3": [
+          "RES2254-NIVELES",
+          "RES2254-ICA",
+          "SALUD"
+        ],
+        "rango": 2
+      },
+      {
+        "consulta": "qué significa que una estación esté en rojo",
+        "esperado": "SALUD|RES2254-ICA",
+        "top3": [
+          "SALUD",
+          "SIATA-VALLE",
+          "RES2254-ICA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "quién declara el nivel de alerta",
+        "esperado": "RES2254-NIVELES",
+        "top3": [
+          "RES2254-NIVELES",
+          "RES2254-NIVELES",
+          "POECA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "umbral de PM2.5 para declarar emergencia",
+        "esperado": "RES2254-NIVELES",
+        "top3": [
+          "RES2254-NIVELES",
+          "OMS2021",
+          "RES2254-NIVELES"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué medidas de pico y placa hay en nivel de alerta",
+        "esperado": "POECA",
+        "top3": [
+          "POECA",
+          "RES2254-NIVELES",
+          "POECA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué pasa con los colegios durante un episodio",
+        "esperado": "POECA",
+        "top3": [
+          "POECA",
+          "SALUD",
+          "METODOLOGIA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "puedo salir a trotar si el ICA está naranja",
+        "esperado": "SALUD",
+        "top3": [
+          "RES2254-ICA",
+          "RES2254-ICA",
+          "SALUD"
+        ],
+        "rango": 3
+      },
+      {
+        "consulta": "quiénes son los grupos sensibles",
+        "esperado": "SALUD",
+        "top3": [
+          "SALUD",
+          "RES2254-ICA",
+          "SALUD"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué recomienda la OMS para PM2.5 en 24 horas",
+        "esperado": "OMS2021",
+        "top3": [
+          "OMS2021",
+          "RES2254-NORMA",
+          "OMS2021"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "metas intermedias de la organización mundial de la salud",
+        "esperado": "OMS2021",
+        "top3": [
+          "RES2254-NORMA",
+          "OMS2021",
+          "RES2254-ICA"
+        ],
+        "rango": 2
+      },
+      {
+        "consulta": "por qué la contaminación sube en marzo en Medellín",
+        "esperado": "SIATA-VALLE",
+        "top3": [
+          "SIATA-VALLE",
+          "SIATA-VALLE",
+          "SIATA-VALLE"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "diferencia entre estaciones de tráfico y poblacionales",
+        "esperado": "SIATA-VALLE|SALUD",
+        "top3": [
+          "SALUD",
+          "SIATA-VALLE",
+          "SIATA-VALLE"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué es SIATA",
+        "esperado": "SIATA-VALLE",
+        "top3": [
+          "SIATA-VALLE",
+          "METODOLOGIA",
+          "SALUD"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "cómo funciona el modelo de pronóstico del proyecto",
+        "esperado": "METODOLOGIA",
+        "top3": [
+          "METODOLOGIA",
+          "METODOLOGIA",
+          "METODOLOGIA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "limitaciones del sistema",
+        "esperado": "METODOLOGIA",
+        "top3": [
+          "METODOLOGIA",
+          "RES2254-NORMA",
+          "SIATA-VALLE"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué es el estado latente del HMM",
+        "esperado": "METODOLOGIA",
+        "top3": [
+          "METODOLOGIA",
+          "METODOLOGIA",
+          "METODOLOGIA"
+        ],
+        "rango": 1
+      }
+    ]
+  },
+  "con_expansion": {
+    "n": 20,
+    "hit@1": 0.85,
+    "hit@3": 1.0,
+    "MRR": 0.925,
+    "detalle": [
+      {
+        "consulta": "¿Cuál es la norma diaria de PM2.5 en Colombia?",
+        "esperado": "RES2254-NORMA",
+        "top3": [
+          "RES2254-NORMA",
+          "RES2254-ICA",
+          "RES2254-NORMA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "límite anual de PM2.5 para 2030",
+        "esperado": "RES2254-NORMA",
+        "top3": [
+          "RES2254-NORMA",
+          "RES2254-NORMA",
+          "RES2254-ICA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "cuántas horas válidas se necesitan para un promedio diario",
+        "esperado": "RES2254-NORMA",
+        "top3": [
+          "RES2254-NORMA",
+          "RES2254-NORMA",
+          "OMS2021"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "fórmula para calcular el índice de calidad del aire",
+        "esperado": "RES2254-ICA",
+        "top3": [
+          "RES2254-ICA",
+          "RES2254-ICA",
+          "RES2254-ICA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "rangos de concentración de cada color del ICA",
+        "esperado": "RES2254-ICA",
+        "top3": [
+          "RES2254-NIVELES",
+          "RES2254-ICA",
+          "SALUD"
+        ],
+        "rango": 2
+      },
+      {
+        "consulta": "qué significa que una estación esté en rojo",
+        "esperado": "SALUD|RES2254-ICA",
+        "top3": [
+          "SALUD",
+          "RES2254-ICA",
+          "RES2254-NIVELES"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "quién declara el nivel de alerta",
+        "esperado": "RES2254-NIVELES",
+        "top3": [
+          "RES2254-NIVELES",
+          "RES2254-NIVELES",
+          "POECA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "umbral de PM2.5 para declarar emergencia",
+        "esperado": "RES2254-NIVELES",
+        "top3": [
+          "RES2254-NIVELES",
+          "OMS2021",
+          "RES2254-NIVELES"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué medidas de pico y placa hay en nivel de alerta",
+        "esperado": "POECA",
+        "top3": [
+          "POECA",
+          "RES2254-NIVELES",
+          "POECA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué pasa con los colegios durante un episodio",
+        "esperado": "POECA",
+        "top3": [
+          "POECA",
+          "SALUD",
+          "METODOLOGIA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "puedo salir a trotar si el ICA está naranja",
+        "esperado": "SALUD",
+        "top3": [
+          "SALUD",
+          "SALUD",
+          "SALUD"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "quiénes son los grupos sensibles",
+        "esperado": "SALUD",
+        "top3": [
+          "SALUD",
+          "RES2254-ICA",
+          "SALUD"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué recomienda la OMS para PM2.5 en 24 horas",
+        "esperado": "OMS2021",
+        "top3": [
+          "RES2254-NORMA",
+          "OMS2021",
+          "RES2254-NORMA"
+        ],
+        "rango": 2
+      },
+      {
+        "consulta": "metas intermedias de la organización mundial de la salud",
+        "esperado": "OMS2021",
+        "top3": [
+          "RES2254-NORMA",
+          "OMS2021",
+          "RES2254-ICA"
+        ],
+        "rango": 2
+      },
+      {
+        "consulta": "por qué la contaminación sube en marzo en Medellín",
+        "esperado": "SIATA-VALLE",
+        "top3": [
+          "SIATA-VALLE",
+          "POECA",
+          "SIATA-VALLE"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "diferencia entre estaciones de tráfico y poblacionales",
+        "esperado": "SIATA-VALLE|SALUD",
+        "top3": [
+          "SALUD",
+          "SIATA-VALLE",
+          "SIATA-VALLE"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué es SIATA",
+        "esperado": "SIATA-VALLE",
+        "top3": [
+          "SIATA-VALLE",
+          "METODOLOGIA",
+          "SALUD"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "cómo funciona el modelo de pronóstico del proyecto",
+        "esperado": "METODOLOGIA",
+        "top3": [
+          "METODOLOGIA",
+          "METODOLOGIA",
+          "METODOLOGIA"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "limitaciones del sistema",
+        "esperado": "METODOLOGIA",
+        "top3": [
+          "METODOLOGIA",
+          "RES2254-NORMA",
+          "SIATA-VALLE"
+        ],
+        "rango": 1
+      },
+      {
+        "consulta": "qué es el estado latente del HMM",
+        "esperado": "METODOLOGIA",
+        "top3": [
+          "METODOLOGIA",
+          "METODOLOGIA",
+          "METODOLOGIA"
+        ],
+        "rango": 1
+      }
+    ]
+  }
+}

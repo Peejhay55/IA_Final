@@ -1,0 +1,22 @@
+[
+ {"q": "¿Cuál es la norma diaria de PM2.5 en Colombia?", "doc": "RES2254-NORMA"},
+ {"q": "límite anual de PM2.5 para 2030", "doc": "RES2254-NORMA"},
+ {"q": "cuántas horas válidas se necesitan para un promedio diario", "doc": "RES2254-NORMA"},
+ {"q": "fórmula para calcular el índice de calidad del aire", "doc": "RES2254-ICA"},
+ {"q": "rangos de concentración de cada color del ICA", "doc": "RES2254-ICA"},
+ {"q": "qué significa que una estación esté en rojo", "doc": "SALUD|RES2254-ICA"},
+ {"q": "quién declara el nivel de alerta", "doc": "RES2254-NIVELES"},
+ {"q": "umbral de PM2.5 para declarar emergencia", "doc": "RES2254-NIVELES"},
+ {"q": "qué medidas de pico y placa hay en nivel de alerta", "doc": "POECA"},
+ {"q": "qué pasa con los colegios durante un episodio", "doc": "POECA"},
+ {"q": "puedo salir a trotar si el ICA está naranja", "doc": "SALUD"},
+ {"q": "quiénes son los grupos sensibles", "doc": "SALUD"},
+ {"q": "qué recomienda la OMS para PM2.5 en 24 horas", "doc": "OMS2021"},
+ {"q": "metas intermedias de la organización mundial de la salud", "doc": "OMS2021"},
+ {"q": "por qué la contaminación sube en marzo en Medellín", "doc": "SIATA-VALLE"},
+ {"q": "diferencia entre estaciones de tráfico y poblacionales", "doc": "SIATA-VALLE|SALUD"},
+ {"q": "qué es SIATA", "doc": "SIATA-VALLE"},
+ {"q": "cómo funciona el modelo de pronóstico del proyecto", "doc": "METODOLOGIA"},
+ {"q": "limitaciones del sistema", "doc": "METODOLOGIA"},
+ {"q": "qué es el estado latente del HMM", "doc": "METODOLOGIA"}
+]

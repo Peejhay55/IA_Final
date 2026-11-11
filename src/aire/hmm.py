@@ -37,7 +37,7 @@ def _norm_cdf(x: np.ndarray) -> np.ndarray:
 class GaussianHMM:
     n_states: int = 3
     n_iter: int = 200
-    tol: float = 1e-4
+    tol: float = 1e-6
     min_var: float = 1e-3
     seed: int = 0
     pi: np.ndarray | None = None
