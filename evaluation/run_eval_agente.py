@@ -104,7 +104,7 @@ def main():
     res = evaluate(a.backend, a.pausa)
     (ROOT / "reports").mkdir(exist_ok=True)
     (ROOT / "reports" / f"eval_agente_{a.backend}.json").write_text(
-        json.dumps(res, indent=2, ensure_ascii=False))
+        json.dumps(res, indent=2, ensure_ascii=False), encoding="utf-8")
     (ROOT / "reports" / f"eval_agente_{a.backend}.md").write_text(to_markdown(res), encoding="utf-8")
     s = res["resumen"]
     print(f"[{a.backend}] herramienta={s['herramienta_correcta']:.0%} cita={s['cito_fuente']:.0%} "
