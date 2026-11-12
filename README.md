@@ -1,6 +1,6 @@
 # 🌫️ Agente de calidad del aire del Valle de Aburrá
 
-**SI3003 – Inteligencia Artificial · Universidad EAFIT · Proyecto final 2026-1 (idea 3.1)**
+**SI3003 – Inteligencia Artificial · Universidad EAFIT · Proyecto final 2026-2 (idea 3.1)**
 
 Integrantes: **William Alberto Villa** · **Pablo José Benítez**
 
