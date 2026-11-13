@@ -1,6 +1,6 @@
 # Declaración de uso de IA generativa
 
-**Curso:** SI3003 – Inteligencia Artificial, Universidad EAFIT, 2026-1
+**Curso:** SI3003 – Inteligencia Artificial, Universidad EAFIT, 2026-2
 **Equipo:** William Alberto Villa · Pablo José Benítez
 
 Conforme al pacto pedagógico del curso declaramos las herramientas de IA generativa usadas, su propósito y

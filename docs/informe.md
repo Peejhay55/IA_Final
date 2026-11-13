@@ -1,6 +1,6 @@
 ---
 title: "Agente de calidad del aire del Valle de Aburrá: HMM, clasificador propio y agente LLM con RAG"
-subtitle: "SI3003 – Inteligencia Artificial · Universidad EAFIT · Proyecto final 2026-1"
+subtitle: "SI3003 – Inteligencia Artificial · Universidad EAFIT · Proyecto final 2026-2"
 author: "William Alberto Villa · Pablo José Benítez"
 ---
 
