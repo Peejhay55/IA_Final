@@ -29,11 +29,22 @@ usuario elige estación y fecha, ve mapas y series, y conversa con el agente.
    Dashboard Streamlit: mapa ICA · series · estados HMM · pronóstico · chat con traza y citas
 ```
 
+## Entregables (punto 5 del enunciado)
+
+| Entregable | Dónde |
+|---|---|
+| Código e instrucciones para reproducir | este README, `src/`, `app.py`, `scripts/`, `requirements.txt` |
+| Informe (≤ 4 páginas) | [`docs/informe.pdf`](docs/informe.pdf) · fuente [`docs/informe.md`](docs/informe.md) |
+| Demostración funcional | `streamlit run app.py` (funciona sin red y sin clave, con modo de respaldo) |
+| Evaluación del agente (15 preguntas) | [`evaluation/preguntas_agente.json`](evaluation/preguntas_agente.json), resultados en `reports/eval_agente_offline.md` y `reports/historial/` |
+| Métricas de la Parte 1 | [`reports/metricas_parte1.json`](reports/metricas_parte1.json), [`notebooks/02_modelos_parte1.ipynb`](notebooks/02_modelos_parte1.ipynb) |
+| Declaración de uso de IA | [`DECLARACION_IA.md`](DECLARACION_IA.md) |
+
 ## 1. Ejecución rápida (reproducible)
 
 ```bash
-git clone <url-del-repo> && cd agente-calidad-aire-aburra
-python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+git clone https://github.com/Peejhay55/IA_Final.git && cd IA_Final
+python3 -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate  (Python 3.9–3.13)
 pip install -r requirements.txt
 cp .env.example .env        # (opcional) pegue su LLM_API_KEY de Groq
 streamlit run app.py        # abre http://localhost:8501
@@ -56,7 +67,9 @@ python scripts/train.py                    # HMM + clasificadores, selección te
 python evaluation/eval_rag.py              # hit@1 / hit@3 / MRR de la recuperación
 python evaluation/run_eval_agente.py --backend offline
 python evaluation/run_eval_agente.py --backend llm --pausa 2     # requiere LLM_API_KEY
-pytest                                      # 20 pruebas (HMM vs enumeración, NB vs sklearn, loop agéntico)
+pytest                                      # 21 pruebas (HMM vs enumeración, NB vs sklearn, loop agéntico)
+python evaluation/run_eval_agente.py --repuntuar reports/historial/eval_agente_llm_corrida1_datos2023.json \
+       --salida historial/eval_agente_llm_corrida1_repuntuada    # vuelve a puntuar sin llamar al LLM
 ```
 
 Los cuadernos `notebooks/01_eda.ipynb`, `02_modelos_parte1.ipynb` y `03_agente_rag.ipynb` están ejecutados
@@ -181,6 +194,7 @@ data/raw|processed|corpus  datos SIATA (crudo comprimido y diario) y corpus RAG
 models/                    hmm.json, clasificador.json (entrenados)
 evaluation/                preguntas del agente, consultas RAG y scripts de evaluación
 reports/                   métricas, validación temporal, evaluaciones, figuras
+reports/historial/         corrida del LLM con datos 2023-2024 (inválida) y su repuntuación
 notebooks/                 01 EDA · 02 Parte 1 · 03 Agente y RAG (ejecutados)
 tests/                     pruebas con pytest (incluye LLM simulado)
 docs/                      informe (≤ 4 páginas)
