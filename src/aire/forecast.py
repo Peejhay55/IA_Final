@@ -257,7 +257,7 @@ def save_models(m: TrainedModels, hp: dict | None = None) -> None:
         "hiperparametros": hp or DEFAULT_HP,
         "scaler": m.scaler.to_dict(), "logreg": m.logreg.to_dict(),
         "nb": m.nb.to_dict(), "majority": m.majority,
-    }, indent=2))
+    }, indent=2), encoding="utf-8")
 
 
 def load_models() -> TrainedModels:
@@ -265,7 +265,7 @@ def load_models() -> TrainedModels:
         from .train import main as train_main
 
         train_main(quick=True)
-    d = json.loads(C.CLASSIFIER_JSON.read_text())
+    d = json.loads(C.CLASSIFIER_JSON.read_text(encoding="utf-8"))
     return TrainedModels(
         hmm=GaussianHMM.load(C.HMM_JSON),
         scaler=StandardScaler.from_dict(d["scaler"]),

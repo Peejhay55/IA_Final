@@ -41,7 +41,8 @@ def main() -> dict:
         m = out[k]
         print(f"{k:15s} hit@1={m['hit@1']:.2f}  hit@3={m['hit@3']:.2f}  MRR={m['MRR']:.2f}")
     (ROOT / "reports").mkdir(exist_ok=True)
-    (ROOT / "reports" / "eval_rag.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
+    (ROOT / "reports" / "eval_rag.json").write_text(json.dumps(out, indent=2, ensure_ascii=False),
+                                                       encoding="utf-8")
     return out
 
 

@@ -54,7 +54,7 @@ def main(quick: bool = False) -> dict:
     resumen = cv.groupby("modelo")[["accuracy", "macro_f1", "balanced_accuracy",
                                     "f1_excedencia"]].mean()
     report["validacion_temporal_promedio"] = resumen.round(4).to_dict(orient="index")
-    C.METRICS_JSON.write_text(json.dumps(report, indent=2, ensure_ascii=False))
+    C.METRICS_JSON.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     _print_summary(report)
     return report
 
