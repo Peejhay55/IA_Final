@@ -8,3 +8,4 @@ venv/
 .streamlit/secrets.toml
 models/rag_index/
 .DS_Store
+data/raw/descargas/

@@ -63,11 +63,16 @@ label = {r.codigo: f"{r.nombre_corto} · {r.nombre}" for r in S.itertuples()}
 with st.sidebar:
     st.header("Parámetros")
     codes = S.sort_values("nombre")["codigo"].tolist()
-    main = st.selectbox("Estación", codes, index=codes.index(28), format_func=lambda c: label[c])
-    fecha = st.date_input("Fecha de referencia («hoy»)", value=pd.Timestamp("2019-03-15").date(),
+    main = st.selectbox("Estación", codes, index=codes.index(28) if 28 in codes else 0,
+                        format_func=lambda c: label[c])
+    default_fecha = pd.Timestamp("2019-03-15").date()
+    if not (lo <= default_fecha <= hi):  # datos distintos a los del proyecto: no fallar
+        default_fecha = hi
+    fecha = st.date_input("Fecha de referencia («hoy»)", value=default_fecha,
                           min_value=lo, max_value=hi)
     comparar = st.multiselect("Comparar con (máx. 3)", [c for c in codes if c != main],
-                              default=[25], max_selections=3, format_func=lambda c: label[c])
+                              default=[25] if 25 in codes and main != 25 else [],
+                              max_selections=3, format_func=lambda c: label[c])
     ventana = st.slider("Días en la serie de tiempo", 14, 365, 90, step=7)
     st.divider()
     st.subheader("Agente")

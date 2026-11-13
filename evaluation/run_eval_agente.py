@@ -22,7 +22,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
+import pandas as pd  # noqa: E402
+
 from aire.agent import LLMAgent, OfflineAgent  # noqa: E402
+from aire.tools import data_range  # noqa: E402
 
 
 def _n(s: str) -> str:
@@ -36,6 +39,12 @@ def contains_any(answer: str, pattern: str) -> bool:
 def evaluate(backend: str, pause: float = 0.0) -> dict:
     spec = json.loads((ROOT / "evaluation" / "preguntas_agente.json").read_text(encoding="utf-8"))
     ctx = spec["contexto_tablero"]
+    lo, hi = data_range()
+    if not (lo <= pd.Timestamp(ctx["fecha"]) <= hi):
+        raise SystemExit(
+            f"Los datos cargados cubren {lo.date()} a {hi.date()}, pero las preguntas usan el "
+            f"periodo 2019-2020 (fecha de contexto {ctx['fecha']}). Restaure los datos del "
+            "proyecto con `git checkout -- data/ models/` y `python scripts/download_data.py`.")
     agent = LLMAgent() if backend == "llm" else OfflineAgent()
     rows = []
     for q in spec["preguntas"]:
