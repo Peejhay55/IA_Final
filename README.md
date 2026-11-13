@@ -50,7 +50,8 @@ streamlit run app.py        # abre http://localhost:8501
 ### Reproducir los resultados desde cero
 
 ```bash
-python scripts/download_data.py --force    # SIATA oficial → espejo GitHub → copia local (plan B)
+python scripts/download_data.py            # reconstruye los CSV desde la copia del proyecto
+python scripts/download_data.py --force    # verifica acceso a SIATA; guarda la descarga aparte
 python scripts/train.py                    # HMM + clasificadores, selección temporal, métricas (~1 min)
 python evaluation/eval_rag.py              # hit@1 / hit@3 / MRR de la recuperación
 python evaluation/run_eval_agente.py --backend offline
@@ -65,9 +66,16 @@ y muestran el análisis con sus salidas.
 
 | Fuente | Uso | Acceso |
 |---|---|---|
-| **SIATA – AMVA**, `https://siata.gov.co/EntregaData1/Datos_SIATA_Aire_pm25.json` | PM2.5 horario de 21 estaciones, 21-feb-2019 → 20-feb-2020 (183 981 registros) | Copia comprimida en `data/raw/`; `scripts/download_data.py` intenta la URL oficial y luego un espejo público en GitHub (`SVA999/IoT-ETL`) con el mismo archivo |
+| **SIATA – AMVA**, `https://siata.gov.co/EntregaData1/Datos_SIATA_Aire_pm25.json` | PM2.5 horario de 21 estaciones, 21-feb-2019 → 20-feb-2020 (183 981 registros) | Copia comprimida en `data/raw/` (datos del proyecto); `scripts/download_data.py --force` intenta la URL oficial y luego un espejo público en GitHub (`SVA999/IoT-ETL`) |
 | **Geoportal SIATA** (`geoportal.siata.gov.co/fastgeoapi/...pm25_minio`) | Dato en vivo opcional (`get_pm25(en_vivo=true)`) | Si no responde, se usa el histórico |
 | Res. 2254/2017, POECA (Acuerdo Metropolitano 04/2018), OMS 2021, SIATA/Alcaldía de Medellín | Corpus RAG (`data/corpus/*.md`, resúmenes parafraseados con URL de la fuente) | Público |
+
+**Verificación de acceso (12-nov-2026).** La URL oficial de SIATA respondió, pero hoy publica otro periodo:
+**2023-07-31 → 2024-07-30** (184 485 registros, 74.9 % válidos, 5 869 días-estación válidos). Como el
+contenido de esa URL cambia con el tiempo, `--force` guarda la descarga en `data/raw/descargas/` y **no**
+reemplaza la copia del proyecto; los modelos, las pruebas y las preguntas de evaluación usan 2019-2020.
+Para trabajar con el periodo nuevo: `python scripts/download_data.py --force --reemplazar` y luego
+`python scripts/train.py` (las preguntas de evaluación con fechas de 2019 dejarían de aplicar).
 
 **Limpieza** (`src/aire/data.py`): se eliminan centinelas (−9999), banderas de calidad SIATA > 2.5 y valores
 fuera de 0–500 µg/m³ → 97.3 % de registros válidos. Promedio diario por estación con ≥ 18 horas válidas
@@ -152,6 +160,7 @@ HMM, tabla de métricas vs líneas base) · **Chat** (preguntas de ejemplo, fuen
 - El HMM comparte parámetros entre estaciones: las de nivel base alto pasan más tiempo en el estado
   *Elevado* (media ≈ 30 µg/m³, categoría Aceptable), que **no** equivale a un episodio crítico oficial.
 - El "hoy" del tablero es una fecha histórica; el dato en vivo depende de un endpoint no documentado de SIATA.
+- La URL oficial de SIATA cambia de periodo con el tiempo (hoy 2023-2024); por eso el proyecto fija una copia.
 - El corpus son resúmenes parafraseados por el equipo; el tesauro y las preguntas de evaluación fueron
   escritos por el mismo equipo (riesgo de sobreajuste).
 - **No es consejo médico, legal ni de seguridad**, ni un pronóstico o declaratoria oficial del AMVA/SIATA.

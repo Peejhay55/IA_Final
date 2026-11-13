@@ -18,9 +18,11 @@ con citas, dentro de un dashboard interactivo.
 ## 2. Datos
 
 **PM2.5 horario de SIATA – AMVA** (archivo oficial `EntregaData1/Datos_SIATA_Aire_pm25.json`): 21 estaciones
-(19 poblacionales y 2 de tráfico), 21-feb-2019 → 20-feb-2020, 183 981 registros. Como los servidores de SIATA
-no siempre responden, el repositorio incluye una copia comprimida y el script de descarga prueba la URL
-oficial, luego un espejo público del mismo archivo y por último la copia local (plan B). Limpieza: se
+(19 poblacionales y 2 de tráfico), 21-feb-2019 → 20-feb-2020, 183 981 registros. El script de descarga
+prueba la URL oficial, luego un espejo público y por último la copia del repositorio (plan B). Al verificar
+el acceso (12-nov-2026) la URL oficial respondió, pero ya publica otro periodo, 2023-07-31 → 2024-07-30
+(184 485 registros, solo 74.9 % válidos frente a 97.3 % del periodo usado). Por eso el proyecto fija una
+copia versionada: una descarga nueva se guarda aparte y no reemplaza los datos con que se entrenó y evaluó. Limpieza: se
 descartan centinelas (−9999), banderas de calidad > 2.5 y valores fuera de 0–500 µg/m³ (queda el 97.3 %);
 promedio diario con ≥ 18 h válidas (75 % de representatividad) → 7 525 días-estación. La clase objetivo es
 *Buena* (≤12), *Aceptable* (12–37) o *Dañina* (>37 µg/m³), con la misma regla de redondeo del ICA. Solo el
@@ -114,9 +116,11 @@ Un solo año de histórico sin meteorología (lluvia, viento, altura de mezcla) 
 68 casos positivos en prueba las métricas de la clase *Dañina* son inestables y la selección de
 hiperparámetros quedó en empate técnico. El HMM con parámetros compartidos hace que estaciones con nivel base
 alto pasen más tiempo en el estado *Elevado*, cuya media (30 µg/m³) está en categoría Aceptable: no equivale
-a un episodio crítico oficial. El tesauro del RAG y las preguntas de evaluación fueron escritos por el mismo
+a un episodio crítico oficial. La primera corrida de la evaluación con el LLM se hizo sin querer sobre el
+periodo 2023-2024 (la descarga había sobrescrito los datos), lo que produjo errores de «fecha fuera del
+histórico»; se corrigió el script y la evaluación ahora verifica el periodo antes de correr. El tesauro del RAG y las preguntas de evaluación fueron escritos por el mismo
 equipo (riesgo de sobreajuste), y la comprobación de contenido por palabras clave es aproximada. Como
-trabajo futuro: añadir covariables meteorológicas (SIATA/Open-Meteo), un HMM con efectos por estación o una
+trabajo futuro: reentrenar con el periodo 2023-2024, añadir covariables meteorológicas (SIATA/Open-Meteo), un HMM con efectos por estación o una
 red bayesiana lluvia–viento–PM2.5, y evaluación del agente con usuarios. **El sistema es informativo: no es
 consejo médico, legal ni de seguridad, ni un pronóstico o declaratoria oficial de SIATA o del AMVA.**
 
