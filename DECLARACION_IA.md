@@ -49,8 +49,10 @@ Verificaciones hechas por el equipo en su máquina local (12-nov-2026):
    67 % de citas y 60 % de contenido. Al reportar el resultado, el asistente identificó la causa: la descarga
    había sobrescrito los datos del proyecto con el periodo 2023-2024, por lo que las preguntas con fechas de
    2019 fallaban. Esto llevó a corregir el script de descarga (ahora guarda aparte), a proteger el dashboard
-   contra fechas fuera de rango y a que la evaluación verifique el periodo antes de correr. La evaluación
-   se repitió con los datos del proyecto (`reports/eval_agente_llm.md`).
+   contra fechas fuera de rango y a que la evaluación verifique el periodo antes de correr. Las respuestas de
+   esa corrida se volvieron a puntuar tras corregir el evaluador (citas con corchetes 【 】 de gpt-oss):
+   en las 9 preguntas que no dependen de fechas de 2019 el LLM obtuvo 89 % / 100 % / 100 %
+   (`reports/historial/`).
 3. **Contraste con la rúbrica.** El equipo pidió un checklist de la rúbrica y los entregables y lo usó para
    identificar lo pendiente antes de la entrega (evaluación con LLM, declaración, publicación en GitHub).
 

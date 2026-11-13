@@ -143,7 +143,13 @@ Se mide si llamó a la **herramienta correcta**, si **citó la fuente** esperada
 | Backend | Herramienta correcta | Citó la fuente | Contenido correcto |
 |---|---|---|---|
 | Router de respaldo sin LLM (línea base) | 93 % | 87 % | 80 % |
-| LLM (`openai/gpt-oss-120b`) | *ejecutar `run_eval_agente.py --backend llm`* | | |
+| LLM (`openai/gpt-oss-120b`), corrida del 12-nov-2026 | 93 % | 73 % | 67 % |
+
+Esa corrida se hizo con los datos 2023-2024 cargados por error, así que las 6 preguntas con fechas de 2019
+fallaron por «fecha fuera del histórico». En las **9 preguntas que no dependen de esas fechas** el LLM logra
+**89 % / 100 % / 100 %** frente a 89 % / 78 % / 78 % del router. Las respuestas se volvieron a puntuar con el
+evaluador corregido (`--repuntuar`); ver `reports/historial/`. Para completar la evaluación:
+`python evaluation/run_eval_agente.py --backend llm --pausa 2`.
 
 ## 5. Dashboard (`app.py`)
 

@@ -103,12 +103,21 @@ probabilístico y la interpretación del régimen que el agente comunica.
 **RAG:** en 20 consultas fijas, hit@3 = 1.00, hit@1 = 0.85 y MRR = 0.93 (hit@1 = 0.80 sin expansión).
 **Agente:** con 15 preguntas fijas (datos, pronóstico, episodio regional, normativa, salud, errores
 intencionales) se mide si llamó a las herramientas esperadas, si citó la fuente esperada y si incluyó el dato
-clave. El router sin LLM, usado como línea base, logra 93 % / 87 % / 80 %: no sabe listar estaciones, recupera la
-norma colombiana cuando se pregunta por la OMS, responde con el estado regional cuando se pregunta por los
-colegios e interpreta «el pronóstico *para* el 17 de agosto» como fecha base, errores que un LLM con las
-mismas herramientas debería evitar. Los resultados
-con el LLM se generan con `python evaluation/run_eval_agente.py --backend llm` y quedan en
-`reports/eval_agente_llm.md`.
+clave. Con Groq `openai/gpt-oss-120b` la corrida se hizo cuando la descarga había reemplazado los datos por el
+periodo 2023-2024, así que las 6 preguntas con fechas de 2019 recibieron «fecha fuera del histórico» y solo
+las otras 9 son válidas (las respuestas guardadas se volvieron a puntuar tras corregir dos fallas del
+evaluador: citas con corchetes 【 】 y guiones Unicode).
+
+| Agente (15 preguntas) | Herramienta | Cita | Contenido | Las 9 sin fechas de 2019 (herr. / cita / cont.) |
+|---|---|---|---|---|
+| LLM `gpt-oss-120b` + herramientas | 93 % | 73 % | 67 % | 89 % / **100 %** / **100 %** |
+| Router determinista (línea base) | 93 % | 87 % | 80 % | 89 % / 78 % / 78 % |
+
+En las preguntas válidas el LLM cita siempre la fuente y da el dato correcto, donde el router falla al
+recuperar la guía de la OMS o al responder sobre colegios. Errores observados del LLM: en P10 resolvió la
+fecha inválida sin llamar a `get_pm25`, y en P12 atribuyó el HMM a SIATA en vez de al proyecto. Las 6
+preguntas que dependen de los datos 2019 quedan pendientes de una nueva corrida
+(`python evaluation/run_eval_agente.py --backend llm`).
 
 ## 6. Limitaciones y trabajo futuro
 
@@ -118,7 +127,8 @@ hiperparámetros quedó en empate técnico. El HMM con parámetros compartidos h
 alto pasen más tiempo en el estado *Elevado*, cuya media (30 µg/m³) está en categoría Aceptable: no equivale
 a un episodio crítico oficial. La primera corrida de la evaluación con el LLM se hizo sin querer sobre el
 periodo 2023-2024 (la descarga había sobrescrito los datos), lo que produjo errores de «fecha fuera del
-histórico»; se corrigió el script y la evaluación ahora verifica el periodo antes de correr. El tesauro del RAG y las preguntas de evaluación fueron escritos por el mismo
+histórico»; se corrigió el script y la evaluación ahora verifica el periodo antes de correr, pero la
+evaluación del LLM sobre preguntas de datos y pronóstico sigue pendiente. El tesauro del RAG y las preguntas de evaluación fueron escritos por el mismo
 equipo (riesgo de sobreajuste), y la comprobación de contenido por palabras clave es aproximada. Como
 trabajo futuro: reentrenar con el periodo 2023-2024, añadir covariables meteorológicas (SIATA/Open-Meteo), un HMM con efectos por estación o una
 red bayesiana lluvia–viento–PM2.5, y evaluación del agente con usuarios. **El sistema es informativo: no es
