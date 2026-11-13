@@ -24,6 +24,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import pandas as pd  # noqa: E402
 
+from aire import config as C  # noqa: E402
 from aire.agent import LLMAgent, OfflineAgent, extract_citations  # noqa: E402
 from aire.tools import data_range  # noqa: E402
 
@@ -43,6 +44,9 @@ def contains_any(answer: str, pattern: str) -> bool:
 def evaluate(backend: str, pause: float = 0.0) -> dict:
     spec = json.loads((ROOT / "evaluation" / "preguntas_agente.json").read_text(encoding="utf-8"))
     ctx = spec["contexto_tablero"]
+    if backend == "llm" and not C.LLM_API_KEY:
+        raise SystemExit("Falta LLM_API_KEY: copie .env.example a .env y pegue su clave de Groq "
+                         "(https://console.groq.com/keys) en la línea LLM_API_KEY=.")
     lo, hi = data_range()
     if not (lo <= pd.Timestamp(ctx["fecha"]) <= hi):
         raise SystemExit(
