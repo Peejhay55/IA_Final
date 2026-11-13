@@ -5,7 +5,8 @@
 - Citó la fuente esperada: **87%**
 - Contenido clave correcto: **80%**
 - Llamadas a herramientas por pregunta: 1.7
-- Tiempo medio por pregunta: 0.07 s
+- Tiempo medio por pregunta: 0.08 s
+- Subconjunto sin fechas de 2019 (9 preguntas): herramienta 89%, cita 78%, contenido 78%
 
 | ID | Pregunta | Esperadas | Usadas | Herr. OK | Citas | Cita OK | Contenido OK |
 |---|---|---|---|:-:|---|:-:|:-:|

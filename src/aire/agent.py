@@ -97,12 +97,20 @@ def _doc_sources() -> dict:
 
 
 CITE_RE = re.compile(r"\[([A-Z0-9]+(?:-[A-Z0-9]+)*)\]")
+_HYPHENS = str.maketrans({c: "-" for c in "\u2010\u2011\u2012\u2013\u2014\u2212"})
+
+
+def normalize_citations(text: str) -> str:
+    """Algunos modelos (p. ej. gpt-oss) citan con corchetes de ancho completo 【X】 y
+    guiones Unicode; se normalizan a [X] para extraer y mostrar las citas."""
+    return (text or "").replace("\u3010", "[").replace("\u3011", "]").translate(_HYPHENS) \
+        if text else ""
 
 
 def extract_citations(text: str) -> list[str]:
     valid = set(DATA_CODES) | set(_doc_sources())
     seen = []
-    for c in CITE_RE.findall(text or ""):
+    for c in CITE_RE.findall(normalize_citations(text)):
         if c in valid and c not in seen:
             seen.append(c)
     return seen
@@ -194,6 +202,7 @@ class LLMAgent:
             return off
         if not answer:
             answer = "No pude generar una respuesta. Intente reformular la pregunta."
+        answer = normalize_citations(answer)
         return AgentResult(answer, steps, extract_citations(answer), "llm", notice, calls)
 
 

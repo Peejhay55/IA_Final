@@ -71,3 +71,10 @@ def test_router_respaldo():
 
 def test_extraer_citas_ignora_codigos_desconocidos():
     assert extract_citations("dato [SIATA-DATOS] y [INVENTADO] y [POECA]") == ["SIATA-DATOS", "POECA"]
+
+
+def test_citas_con_corchetes_de_ancho_completo():
+    from aire.agent import normalize_citations
+    txt = "Estación CAL‑JOAR 【SIATA-DATOS】 y 【POECA】"
+    assert extract_citations(txt) == ["SIATA-DATOS", "POECA"]
+    assert normalize_citations(txt) == "Estación CAL-JOAR [SIATA-DATOS] y [POECA]"
